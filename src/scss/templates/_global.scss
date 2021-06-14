@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+// :root {
+// --blue-light: #add4ff;
+// --gray: #b8c2cc;
+// --gray-dark: #625f6e;
+// --gray-extra-dark: #625f6e;
+// --gray-light: #f1f1f1;
+// --gray-extra-light: #f7f7f7;
+// --white: #ffffff;
+// --active-navigation: #f6f6f6;
+// --primary: #027afe;
+// --secondary: #82868b;
+// --success: #28c76f;
+// --info: #00cfe8;
+// --warning: #ff9f43;
+// --danger: #ea5455;
+// --light: #ffffff;
+// --dark: #191f30;
+// --dark-secondary: #1e273d;
+// }
+
+@import "../theme_colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  // user-select: none;
+  box-sizing: border-box;
+  // font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.fs-big {
+    font-size: 6em;
+}
+
+html,
+body {
+  background: #f8f8f8;
+  height: 100%;
+  color: $gray-dark;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.same-height > [class*="col"] {
+  display: flex;
+  flex-flow: column;
+}
+.same-height > [class*="col"] .content,
+.same-height > [class*="col"] .card {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120vh;
+  background-color: rgba(34, 41, 47, 0.5);
+  z-index: 100;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.image-notification {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  /* margin: 3px; */
+}
+
+.text-small {
+  font-size: 0.7em;
+}
+
+.margin-left-15 {
+  margin-left: 15px;
+}
+
+.header-statistics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $gray-extra-light;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.header-statistics p {
+  line-height: 2px;
+  color: $gray;
+  font-size: 0.8em;
+}
+
+.bg-pink {
+  background-color: rgba(255, 99, 132, 1);
+}
+
+.float-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  position: absolute;
+  background-color: $white;
+  box-shadow: 0 3px 10px $gray;
+  z-index: 1;
+  border-radius: 5px;
+  top: -10px;
+  left: 10px;
+  width: 90px;
+}

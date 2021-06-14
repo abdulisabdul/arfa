@@ -1,0 +1,96 @@
+@import "templates/global";
+
+// template
+@import "templates/sidebar";
+@import "templates/header";
+@import "templates/main-content";
+@import "templates/footer";
+@import "templates/settings";
+
+
+// elements
+@import "elements/datatables";
+@import "elements/select2";
+@import "elements/timeline";
+@import "elements/chat";
+@import "elements/themify_icons";
+
+// ============== RESPONSIVE ===================
+@media only screen and (max-width: 900px) {
+  .collapse-sidebar {
+    .main-sidebar {
+      margin-left: -270px;
+      :hover {
+        width: 0 !important;
+      }
+    }
+    .overlay {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  .header-navbar {
+    .header-left {
+      margin-left: 2.2em;
+    }
+    .header-content{
+      .user-dropdown .label {
+        display: none;
+      }
+    }
+  }
+  .header-navbar{
+    position: fixed !important;
+  }
+  .main-content {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .mobile {
+    .main-sidebar {
+      margin-left: -270px;
+    }
+  }
+
+  .close-sidebar {
+    display: flex;
+  }
+
+  .sidebar-toggle a {
+    display: none;
+  }
+
+  .header-navbar {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    /* width: calc(100vw - (100vw - 100%) - 20px); */
+  }
+
+  .overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  footer {
+    padding: 0 15px !important;
+  }
+
+  .header-content .user-dropdown .label {
+    display: none;
+  }
+
+  .dropdown-menu.medium {
+    width: calc(100vw - 30px);
+    top: 20px !important;
+    left: -15px !important;
+    &.small {
+      top: 10px !important;
+      left: 5px !important;
+    }
+  }
+}
+
+.rounded-top-left{
+  border-top-left-radius: .25em;
+}

@@ -1,0 +1,105 @@
+{% set title = 'Form - Select2' %}
+{% set page = 'form-select2.html' %}
+{% extends "layouts/main.html" %}
+
+{% block css%}
+<link href="../node_modules/select2/dist/css/select2.min.css" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+<div class="main-content">
+    <div class="title">
+        Title
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Select2 Sizing</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">You may also choose from small and large custom selects to
+                            match
+                            our
+                            similarly sized text inputs.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <select class="js-example-basic-single form-select form-select-sm">
+                                    <option></option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <select class="js-example-basic-single form-select">
+                                    <option></option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <select class="js-example-basic-single form-select form-select-lg">
+                                    <option></option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Select2 Multiple Sizing</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">You may also choose from small and large custom selects to
+                            match
+                            our
+                            similarly sized text inputs.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <select class="js-example-basic-single form-select form-select-sm" name="state"
+                                    multiple>
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <select class="js-example-basic-single form-select" name="state" multiple>
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <select class="js-example-basic-single form-select form-select-lg" name="state"
+                                    multiple>
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+{% block js %}
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/select2/dist/js/select2.min.js"></script>
+{% endblock %}
+{% block runjs %}
+<script>
+    $(document).ready(function () {
+        $('.js-example-basic-single').select2({
+            placeholder: 'Select an option'
+        });
+    });
+</script>
+{% endblock %}

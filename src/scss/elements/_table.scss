@@ -1,0 +1,9 @@
+.table {
+  color: $gray-dark;
+  thead {
+    background-color: $gray-extra-light;
+  }
+  > :not(:last-child) > :last-child > * {
+    border-bottom-color: $gray;
+  }
+}

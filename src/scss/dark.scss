@@ -1,0 +1,414 @@
+@import "theme_colors";
+body.dark {
+  // background-color: $dark;
+  .title,
+  .form-label,
+  .form-text {
+    color: $gray;
+  }
+  .text-muted {
+    color: $gray-dark !important;
+  }
+  .main-sidebar {
+    background: #1e273d;
+    // .main-menu {
+    // background: #1e273d;
+    // }
+    .sidebar-content ul {
+      background: #1e273d;
+      a {
+        color: $gray;
+      }
+      li {
+        &.open {
+          > a {
+            background-color: $dark;
+            color: $white;
+          }
+        }
+      }
+      .sub-menu {
+        li {
+          a {
+            color: $gray;
+          }
+          &.active a {
+            background: $dark !important;
+            span {
+              color: $white;
+            }
+            &::before {
+              content: "";
+              background: map-get($theme-colors, "primary");
+              box-shadow: 0 0 6px map-get($theme-colors, "primary");
+              height: 8px;
+              width: 8px;
+              border-radius: 5px;
+              position: absolute;
+              top: calc(50% - 4px);
+              left: 10px;
+            }
+          }
+        }
+      }
+    }
+    .sidebar-content {
+      li.active > a {
+        background-color: linear-gradient(
+          90deg,
+          var(--primary),
+          rgba(70, 137, 238, 0.7)
+        );
+      }
+    }
+    .sidebar-toggle,
+    .sidebar-opener {
+      a {
+        box-shadow: 0 0 5px $gray-dark;
+        // box-shadow: none;
+        // border: 1px solid $gray-extra-dark;
+        background: #1e273d;
+        color: $gray;
+      }
+    }
+
+    box-shadow: none;
+  }
+  .header-navbar {
+    .header-wrapper {
+      background: #1e273d;
+      box-shadow: 0 0 15px $dark;
+    }
+    .header-content {
+      span,
+      .notification a i {
+        color: $gray;
+      }
+    }
+    .header-left {
+      .theme-switch-icon::before {
+        content: "\f185";
+        font-family: "Font Awesome 5 Free";
+        color: rgb(196, 166, 32);
+      }
+    }
+    .toggle-mobile {
+      // box-shadow: 0 0 5px $gray-dark;
+      box-shadow: none;
+      background: #1e273d;
+      color: $gray;
+    }
+  }
+
+  .main-content {
+    background: $dark;
+    > .title {
+      color: $gray;
+    }
+    .card-body {
+      > p {
+        color: $gray;
+      }
+      background: $dark-secondary;
+      box-shadow: none;
+      
+    }
+  }
+  .settings {
+    .settings-content {
+      background: $dark-secondary;
+      box-shadow: none;
+      border-top: 1px solid $gray-extra-dark;
+      border-left: 1px solid $gray-extra-dark;
+      border-bottom: 1px solid $gray-extra-dark;
+      li {
+        border-bottom: 0.5px solid $gray-extra-dark;
+      }
+      label {
+        color: $gray;
+      }
+    }
+    .settings-icon-wrapper {
+      background: map-get($theme-colors, "primary");
+      color: $white;
+      border: none;
+    }
+  }
+
+  .shadow-header {
+    background: linear-gradient(
+      180deg,
+      rgba(23, 31, 48, 0.8),
+      rgba(23, 31, 48, 0.2)
+    );
+  }
+
+  .close-sidebar {
+    box-shadow: 0 0 5px $gray-dark;
+    // box-shadow: none;
+    color: $gray;
+  }
+
+  footer,
+  footer.sticky {
+    background: $dark-secondary;
+    color: $gray;
+    box-shadow: 0 0 5px $dark;
+    border-top: none;
+  }
+
+  #app {
+    background: $dark;
+  }
+  .header-statistics {
+    h5 {
+      color: $gray;
+    }
+    background-color: $dark-secondary;
+  }
+
+  // ============== Form ===============
+  .form-control,
+  .form-select {
+    background-color: $dark-secondary;
+    border: 1px solid $gray-extra-dark;
+    &:focus {
+      box-shadow: 0 0 3px map-get($theme-colors, "primary");
+      border: 1px solid map-get($map: $theme-colors, $key: "primary");
+    }
+    &:read-only,
+    &:disabled,
+    &:focus {
+      // background: $dark-secondary;
+      color: $gray;
+    }
+    color: $gray;
+  }
+  .form-check-input {
+    background-color: $dark-secondary;
+    border: 1px solid $gray-extra-dark;
+    &:focus {
+      box-shadow: 0 0 3px map-get($theme-colors, "primary");
+    }
+    &:checked {
+      background-color: map-get($theme-colors, "primary");
+    }
+  }
+  .form-switch {
+    .form-check-input {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+    }
+    &.lg {
+      .form-check-input {
+        background-color: $dark-secondary;
+        &:checked {
+          background-color: map-get($theme-colors, "primary");
+        }
+      }
+    }
+  }
+
+  .form-range {
+    &::-webkit-slider-runnable-track {
+      background: $dark;
+    }
+  }
+  .input-group-text,
+  .input-group-text.light {
+    background: $dark;
+    border: 1px solid $gray-extra-dark;
+    color: $gray;
+  }
+
+  // ======= Drop down
+  .dropdown-menu {
+    background: $dark-secondary;
+    border: 1px solid $gray-extra-dark;
+    box-shadow: none;
+    .menu-content,
+    .menu-header {
+      .subject,
+      .description {
+        color: $gray;
+      }
+      a {
+        border-bottom: 1px solid $gray-extra-dark;
+        &:hover {
+          background: $dark;
+        }
+      }
+    }
+    .dropdown-item {
+      color: $gray;
+    }
+  }
+
+  // ======== Card ========
+  .card {
+    box-shadow: none;
+  }
+  .card,
+  .card .card-header {
+    background-color: $dark-secondary;
+    color: $gray;
+    h4 {
+      color: $gray;
+    }
+  }
+  // ============== table ==========
+  .table {
+    td,
+    th {
+      color: $gray;
+      border-color: $gray-dark;
+    }
+    thead {
+      background-color: $dark;
+      color: $gray;
+    }
+    > :not(:last-child) > :last-child > * {
+      border-bottom-color: $gray-dark;
+    }
+  }
+  .table-bordered {
+    tr {
+      color: $gray;
+      border-color: $gray-dark;
+    }
+  }
+  // ========== swal ======
+  .dark {
+    .swal2-popup {
+      background-color: $dark-secondary;
+    }
+    .swal2-title,
+    .swal2-content {
+      color: $gray;
+    }
+  }
+
+  // ====== Alert =====
+  @import "elements/alert_dark";
+
+  // =============== modal =========
+  .modal {
+    &-content {
+      background: $dark-secondary;
+    }
+    h5,
+    &-body {
+      color: $gray;
+    }
+    &-header {
+      background: $dark;
+      .btn-close {
+        background: $dark-secondary;
+        box-shadow: none;
+        &::after {
+          color: $gray-light;
+        }
+      }
+    }
+    &-footer {
+      border-top-color: $gray-dark;
+    }
+  }
+
+  // ============ breadcrumb =========
+  nav[aria-label="breadcrumb"] {
+    .active {
+      color: $gray;
+    }
+  }
+
+  // ========= list group =======
+  .list-group {
+    .list-group-item {
+      background: $dark-secondary;
+      color: $gray;
+      border: 1px solid $gray-extra-dark;
+      &.active {
+        background: $dark;
+      }
+    }
+    @each $class, $color in $theme-colors {
+      .list-group-item-#{$class} {
+        background: rgba($color, 30%);
+      }
+    }
+  }
+
+  // =========== pagination ===========
+  .pagination {
+    .page-item a,
+    .page-item.disabled a {
+      background: $dark-secondary;
+      border: 1px solid $gray-dark;
+    }
+  }
+
+  // ========= progress ===========
+  .progress {
+    background-color: rgba($dark, 70%);
+  }
+
+  // =========== accordion =======
+  .accordion-item {
+    border-color: $gray-extra-dark;
+    background-color: $dark-secondary;
+    color: $gray;
+    .accordion-button {
+      &::after {
+        content: "\e648";
+        font-family: "themify";
+        background-image: none;
+      }
+      background-color: $dark-secondary;
+      color: $gray;
+      padding: 0.7em;
+      &:not(.collapsed) {
+        color: map-get($map: $theme-colors, $key:'light' );
+        background-color: $dark;
+        box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+        &::after {
+          color: map-get($map: $theme-colors, $key: "primary");
+        }
+      }
+      &:focus {
+        border-color: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .accordion.accordion-space{
+    .accordion-item {
+      &:not(:first-of-type){
+        border-top: 1px solid $gray-extra-dark;
+      }
+    }
+  }
+
+  // ============= tab ============
+  .nav-tabs {
+    border-color: $gray-dark;
+    .nav-link {
+      &.active {
+        background-color: $dark-secondary;
+        border-color: $gray-dark $gray-dark $dark-secondary;
+        color: $gray;
+      }
+      // border: 1px solid $gray-extra-dark !important;
+      // border-color: $gray;
+    }
+    .nav-item {
+      .nav-link:hover {
+        border: 1px solid $gray-extra-dark !important;
+        border-color: $gray;
+      }
+    }
+  }
+  .tab-pane {
+    color: $gray;
+  }
+}

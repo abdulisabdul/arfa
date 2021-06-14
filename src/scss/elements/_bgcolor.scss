@@ -1,0 +1,11 @@
+@each $class, $color in $theme-colors {
+    .bg-#{$class} {
+      background-color: $color !important;
+    }
+    .border-#{$class} {
+      border-color: $color !important;
+    }
+    .text-#{$class} {
+      color: $color !important;
+    }
+  }

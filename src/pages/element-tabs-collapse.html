@@ -1,0 +1,324 @@
+{% set title = 'Element Tabs & Collapse' %}
+{% set page = 'element-tabs-collapse.html' %}
+{% extends "layouts/main.html" %}
+
+{% block css%}
+
+{% endblock %}
+{% block content %}
+<div class="main-content">
+    <div class="title">
+        Collapse
+    </div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Basic</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Generally, we recommend using a button with the
+                            <code>data-bs-target</code> attribute. While not recommended from a semantic point
+                            of
+                            view, you can also use a link with the <code>href</code> attribute (and a
+                            <code>role="button"</code>). In both cases, the
+                            <code>data-bs-toggle="collapse"</code>
+                            is required.</p>
+                        <p>
+                            <a class="btn btn-primary mb-2" data-bs-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Link with href
+                            </a>
+                            <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false"
+                                aria-controls="collapseExample">
+                                Button with data-bs-target
+                            </button>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card-body">
+                                Some placeholder content for the collapse component. This panel is hidden by
+                                default
+                                but revealed when the user activates the relevant trigger.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Multiple toggle</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">A <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can
+                            show
+                            and hide multiple elements by referencing them with a selector in its
+                            <code>href</code>
+                            or <code>data-bs-target</code> attribute.
+                            Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide an
+                            element if they each reference it with their <code>href</code> or
+                            <code>data-bs-target</code> attribute</p>
+                        <p>
+                            <a class="btn btn-primary mb-2" data-bs-toggle="collapse" href="#multiCollapseExample1"
+                                role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle
+                                first element</a>
+                            <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Toggle second element</button>
+                            <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target=".multi-collapse" aria-expanded="false"
+                                aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both
+                                elements</button>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                    <div class="card-body">
+                                        Some placeholder content for the first collapse component of this
+                                        multi-collapse example. This panel is hidden by default but revealed
+                                        when
+                                        the user activates the relevant trigger.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                    <div class="card-body">
+                                        Some placeholder content for the second collapse component of this
+                                        multi-collapse example. This panel is hidden by default but revealed
+                                        when
+                                        the user activates the relevant trigger.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        Tabs
+    </div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Default tabs</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                    aria-selected="true">Home</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                    aria-selected="false">Profile</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
+                                    aria-selected="false">Contact</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                aria-labelledby="home-tab">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                elit.
+                                Commodi, officiis!<p></p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, asperiores.
+                                    Distinctio sunt perferendis, minus sapiente quia impedit maxime quaerat
+                                    officiis
+                                    temporibus, earum magni voluptatibus consequatur corporis eaque beatae
+                                    accusantium rerum!</p>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel"
+                                aria-labelledby="profile-tab">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure doloribus
+                                exercitationem veritatis. Nobis, voluptate praesentium?</div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel"
+                                aria-labelledby="contact-tab">
+                                Lorem ipsum dolor sit amet.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Tabs pills</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab"
+                                    aria-controls="pills-home" aria-selected="true">Home</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">Profile</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">Contact</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                aria-labelledby="pills-home-tab">Lorem ipsum, dolor sit amet consectetur
+                                adipisicing
+                                elit. Nobis suscipit reprehenderit vero. Repellat odio excepturi nisi,
+                                voluptatibus
+                                assumenda recusandae quia asperiores facilis eos quis non ut. Repellendus amet
+                                aperiam vitae!</div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatum, mollitia!</div>
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                aria-labelledby="pills-contact-tab">Lorem ipsum dolor sit amet.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Tabs Icon</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab2" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home2" type="button" role="tab"
+                                    aria-controls="pills-home" aria-selected="true"><i class="ti-home"></i>
+                                    Home</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab2" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile2" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false"><i class="ti-user"></i>
+                                    Profile</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link disabled" id="pills-contact-tab2" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact2" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false"><i class="ti-book"></i>
+                                    Contact</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home2" role="tabpanel"
+                                aria-labelledby="pills-home-tab">Lorem ipsum, dolor sit amet consectetur
+                                adipisicing
+                                elit. Nobis suscipit reprehenderit vero. Repellat odio excepturi nisi,
+                                voluptatibus
+                                assumenda recusandae quia asperiores facilis eos quis non ut. Repellendus amet
+                                aperiam vitae!</div>
+                            <div class="tab-pane fade" id="pills-profile2" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatum, mollitia!</div>
+                            <div class="tab-pane fade" id="pills-contact2" role="tabpanel"
+                                aria-labelledby="pills-contact-tab">Lorem ipsum dolor sit amet.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Tabs justify</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Tab justify, add <code>.nav-fill</code> or
+                            <code>.nav-justified</code></p>
+                        <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home2" type="button" role="tab"
+                                    aria-controls="pills-home" aria-selected="true">Home</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile2" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">Profile</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact2" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">Contact</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home2" role="tabpanel"
+                                aria-labelledby="pills-home-tab">Lorem ipsum, dolor sit amet consectetur
+                                adipisicing
+                                elit. Nobis suscipit reprehenderit vero. Repellat odio excepturi nisi,
+                                voluptatibus
+                                assumenda recusandae quia asperiores facilis eos quis non ut. Repellendus amet
+                                aperiam vitae!</div>
+                            <div class="tab-pane fade" id="pills-profile2" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatum, mollitia!</div>
+                            <div class="tab-pane fade" id="pills-contact2" role="tabpanel"
+                                aria-labelledby="pills-contact-tab">Lorem ipsum dolor sit amet.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Vertical pills</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-start">
+                            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-home" type="button" role="tab"
+                                    aria-controls="v-pills-home" aria-selected="true">Home</button>
+                                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-profile" type="button" role="tab"
+                                    aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+                                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-messages" type="button" role="tab"
+                                    aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+                                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-settings" type="button" role="tab"
+                                    aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+                            </div>
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Iure quaerat asperiores nihil laboriosam iusto,
+                                    accusantium
+                                    nesciunt hic doloribus magni neque eaque error quas repellat. Aliquid id
+                                    architecto tempore distinctio quibusdam!</div>
+                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab">...2</div>
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                    aria-labelledby="v-pills-messages-tab">...3</div>
+                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                    aria-labelledby="v-pills-settings-tab">...4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+{% block js %}
+
+{% endblock %}

@@ -1,0 +1,302 @@
+{% set title = 'Element Modal' %}
+{% set page = 'element-modal.html' %}
+{% extends "layouts/main.html" %}
+
+{% block css%}
+
+{% endblock %}
+{% block content %}
+<div class="main-content">
+    <div class="title">
+        Modal
+    </div>
+
+    <div class="content-wrapper">
+        <div class="row same-height">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 mt-2 d-flex justify-content-center">Basic Modal</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" type="button">Try me!</button>
+                        </div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
+                                        consequatur
+                                        sint libero esse assumenda provident placeat sed porro ad iusto.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 mt-2 d-flex justify-content-center">Static Backdrop</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" type="button">Try me!</button>
+                        </div>
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+                                        deleniti.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 mt-2 d-flex justify-content-center">Scroll inside modal</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalScrollable" type="button">Try me!</button>
+                        </div>
+                        <div class="modal fade" id="exampleModalScrollable" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="exampleModalScrollableLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalScrollableLabel">Modal title
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vero quidem,
+                                        reiciendis fugiat nam tenetur placeat amet iure culpa! Voluptatibus,
+                                        explicabo rerum. Ullam ut at deserunt ipsam porro quos corporis.
+                                        Ducimus reiciendis temporibus sapiente, obcaecati saepe minima odit quia
+                                        fugit facere commodi ipsa, voluptate nam, ratione velit laboriosam
+                                        debitis
+                                        voluptatum culpa! Maiores voluptates deleniti expedita sed reprehenderit
+                                        possimus quo voluptate.
+                                        Distinctio eveniet recusandae sequi quis repellat debitis itaque,
+                                        numquam,
+                                        est neque porro earum quas nemo omnis totam consequuntur. Nesciunt et
+                                        laudantium nostrum maiores culpa ab ipsum dolores architecto
+                                        exercitationem
+                                        ullam.
+                                        Praesentium deserunt impedit voluptates molestias deleniti voluptatum,
+                                        hic
+                                        itaque mollitia autem, rerum officiis tenetur libero veniam corporis
+                                        odio
+                                        nisi assumenda dolore, sed blanditiis tempora doloremque consequatur ea
+                                        voluptatibus? Quidem, aperiam?
+                                        Ad, quae saepe maxime nam mollitia animi modi cumque. Ratione voluptate
+                                        dolore expedita odio possimus? Tenetur, amet id, veniam similique
+                                        excepturi
+                                        expedita error labore et omnis deleniti culpa, saepe porro.
+                                        Consectetur similique cupiditate inventore, officiis sunt natus fugit
+                                        magni
+                                        necessitatibus, dolor architecto repudiandae nesciunt qui dolorem
+                                        voluptate
+                                        illo accusantium. Dolores voluptas dolorem consectetur aliquid hic ex
+                                        quia.
+                                        Hic, dolorum error.
+                                        Commodi asperiores libero inventore quam culpa nihil natus ipsa
+                                        reprehenderit rem, aliquid exercitationem quisquam. Neque, voluptates
+                                        officiis eaque accusamus eligendi dignissimos iure laudantium! Officia
+                                        quo
+                                        quod, incidunt laudantium aperiam voluptatum.
+                                        Voluptatum doloremque quia unde modi, debitis, reiciendis adipisci hic
+                                        corporis, quas autem mollitia maxime? Facilis magni maxime dolore quia,
+                                        expedita accusamus possimus numquam temporibus veritatis fugiat
+                                        pariatur.
+                                        Obcaecati, voluptatibus itaque.
+                                        Magni doloribus commodi voluptas at molestiae esse? Qui perspiciatis
+                                        repellat praesentium sint quas accusantium quis ipsa cum soluta illo
+                                        similique ad cupiditate maiores laudantium repellendus, obcaecati quos
+                                        ducimus commodi. Incidunt.
+                                        Fuga asperiores dolore sint quisquam assumenda, totam aut sit, placeat
+                                        doloremque maiores ducimus recusandae inventore illum vitae. Ex ullam
+                                        reiciendis error eos eum ratione non repellendus inventore ab
+                                        consequatur.
+                                        Ullam.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 mt-2 d-flex justify-content-center">Vertical Centered</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#verticalCenter" type="button">Try me!</button>
+                        </div>
+                        <div class="modal fade" id="verticalCenter" tabindex="-1"
+                            aria-labelledby="verticalCenterLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="verticalCenterLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
+                                        consequatur
+                                        sint libero esse assumenda provident placeat sed porro ad iusto.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 mt-2 d-flex justify-content-center">Extra Large</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#extraLargeModal" type="button">Try me!</button>
+                        </div>
+                        <div class="modal fade" id="extraLargeModal" tabindex="-1"
+                            aria-labelledby="extraLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="extraLargeModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
+                                        consequatur
+                                        sint libero esse assumenda provident placeat sed porro ad iusto.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 mt-2 d-flex justify-content-center">Large Modal</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#largeModal" type="button">Try me!</button>
+                        </div>
+                        <div class="modal fade" id="largeModal" tabindex="-1" aria-labelledby="largeModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="largeModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
+                                        consequatur
+                                        sint libero esse assumenda provident placeat sed porro ad iusto.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 mt-2 d-flex justify-content-center">Small Modal</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#smallModal" type="button">Try me!</button>
+                        </div>
+                        <div class="modal fade" id="smallModal" tabindex="-1" aria-labelledby="smallModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="smallModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
+                                        consequatur
+                                        sint libero esse assumenda provident placeat sed porro ad iusto.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+
+{% endblock %}

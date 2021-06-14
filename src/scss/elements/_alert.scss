@@ -1,0 +1,22 @@
+.alert {
+    padding: 8px 10px;
+  }
+  @each $class, $color in $theme-colors {
+    .alert-#{$class} {
+      &.alert-dismissible {
+        padding-right: 1em;
+        button {
+          top: -5px;
+          right: -10px;
+          background: lighten($color: $color, $amount: 20);
+          color: darken($color: $color, $amount: 20);
+          box-shadow: 0 0 3px $color;
+          opacity: 1;
+          text-align: center;
+          line-height: 1em;
+          padding: 0.3em;
+          font-weight: bold;
+        }
+      }
+    }
+  }

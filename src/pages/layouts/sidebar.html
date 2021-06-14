@@ -1,0 +1,118 @@
+        <nav class="main-sidebar ps-menu">
+            <div class="sidebar-toggle action-toggle">
+                <a href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+            <div class="sidebar-opener action-toggle">
+                <a href="#">
+                    <i class="ti-angle-right"></i>
+                </a>
+            </div>
+            <div class="sidebar-header">
+                <div class="text">AR</div>
+                <div class="close-sidebar action-toggle">
+                    <i class="ti-close"></i>
+                </div>
+            </div>
+            <div class="sidebar-content">
+                <ul>
+                    <li{{ ' class="active"'|is_active('^index.html', page)|safe }}>
+                        <a href="index.html" class="link">
+                            <i class="ti-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu has-dropdown">
+                            <i class="ti-bar-chart"></i>
+                            <span>Charts</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="link"><span>Detail</span></a></li>
+                        </ul>
+                    </li>
+                    <li{{ ' class="active open"'|is_active('^element-(.*)', page)|safe }}>
+                        <a href="#" class="main-menu has-dropdown">
+                            <i class="ti-desktop"></i>
+                            <span>UI Elements</span>
+                        </a>
+                        <ul class="sub-menu {{ 'expand'|is_active('^element-(.*)', page)|safe }}">
+                            <li{{ ' class="active"'|is_active('^element-ui.html', page)|safe }}><a href="element-ui.html" class="link"><span>Elements</span></a></li>
+                            <li{{ ' class="active"'|is_active('^element-accordion.html', page)|safe }}><a href="element-accordion.html" class="link"><span>Accordion</span></a></li>
+                            <li{{ ' class="active"'|is_active('^element-tabs-collapse.html', page)|safe }}><a href="element-tabs-collapse.html" class="link"><span>Tabs & Collapse</span></a></li>
+                            <li{{ ' class="active"'|is_active('^element-card.html', page)|safe }}><a href="element-card.html" class="link"><span>Card</span></a></li>
+                            <li{{ ' class="active"'|is_active('^element-button.html', page)|safe }}><a href="element-button.html" class="link"><span>Buttons</span></a></li>
+                            <li{{ ' class="active"'|is_active('^element-alert.html', page)|safe }}><a href="element-alert.html" class="link"><span>Alert</span></a></li>
+                            <li{{ ' class="active"'|is_active('^element-themify-icons.html', page)|safe }}><a href="element-themify-icons.html" class="link"><span>Themify Icons</span></a></li>
+                            <li{{ ' class="active"'|is_active('^element-modal.html', page)|safe }}><a href="element-modal.html" class="link"><span>Modal</span></a></li>
+                        </ul>
+                    </li>
+                    <li{{ ' class="active open"'|is_active('^form-(.*)', page)|safe }}>
+                        <a href="#" class="main-menu has-dropdown">
+                            <i class="ti-book"></i>
+                            <span>Form</span>
+                        </a>
+                        <ul class="sub-menu {{ 'expand'|is_active('^form-(.*)', page)|safe }}">
+                            <li{{ ' class="active"'|is_active('^form-element.html', page)|safe }}><a href="form-element.html" class="link">
+                                    <span>Form Element</span></a>
+                            </li>
+                            <li{{ ' class="active"'|is_active('^form-select2.html', page)|safe }}><a href="form-select2.html" class="link">
+                                    <span>Select2</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu has-dropdown">
+                            <i class="ti-notepad"></i>
+                            <span>Utilities</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="error-404.html" target="_blank" class="link"><span>Error 404</span></a></li>
+                            <li><a href="error-403.html" target="_blank" class="link"><span>Error 403</span></a></li>
+                            <li><a href="error-500.html" target="_blank" class="link"><span>Error 500</span></a></li>
+                        </ul>
+                    </li>
+                    <li{{ ' class="active open"'|is_active('^pages-(.*)', page)|safe }}>
+                        <a href="#" class="main-menu has-dropdown">
+                            <i class="ti-layers-alt"></i>
+                            <span>Pages</span>
+                        </a>
+                        <ul class="sub-menu {{ 'expand'|is_active('^pages-(.*)', page)|safe }}">
+                            <li{{ ' class="active"'|is_active('^pages-blank.html', page)|safe }}><a href="pages-blank.html" class="link"><span>Blank</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu has-dropdown">
+                            <i class="ti-hummer"></i>
+                            <span>Auth</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="auth-login.html" target="_blank" class="link"><span>Login</span></a></li>
+                            <li><a href="auth-register.html" target="_blank" class="link"><span>Register</span></a></li>
+                        </ul>
+                    </li>
+                    <li{{ ' class="active open"'|is_active('^table-(.*)', page)|safe }}>
+                        <a href="#" class="main-menu has-dropdown">
+                            <i class="ti-write"></i>
+                            <span>Tables</span>
+                        </a>
+                        <ul class="sub-menu {{ 'expand'|is_active('^table-(.*)', page)|safe }}">
+                            <li{{ ' class="active"'|is_active('^table-basic.html', page)|safe }}><a href="table-basic.html" class="link"><span>Table Basic</span></a></li>
+                            <li{{ ' class="active"'|is_active('^table-datatables.html', page)|safe }}><a href="table-datatables.html" class="link"><span>DataTables</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu has-dropdown">
+                            <i class="ti-crown"></i>
+                            <span>Component</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="link">Sub Menu</a></li>
+                            <li><a href="#" class="link">Sub Menu</a></li>
+                            <li><a href="#" class="link">Sub Menu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>

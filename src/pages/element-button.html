@@ -1,0 +1,358 @@
+{% set title = 'Element Button' %}
+{% set page = 'element-button.html' %}
+{% extends "layouts/main.html" %}
+
+{% block css%}
+
+{% endblock %}
+{% block content %}
+<div class="main-content">
+    <div class="title">
+        Button
+    </div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Basic Buttons</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">
+                            Use the button classes <code>.btn-*</code> on an <code>a</code>,
+                            <code>button</code>, or
+                            <code>input</code> element.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn mb-2 btn-primary" disabled>Primary</button>
+                                <button type="button" class="btn mb-2 btn-primary">Primary</button>
+                                <button type="button" class="btn mb-2 btn-secondary">Secondary</button>
+                                <button type="button" class="btn mb-2 btn-success">Success</button>
+                                <button type="button" class="btn mb-2 btn-danger">Danger</button>
+                                <button type="button" class="btn mb-2 btn-warning">Warning</button>
+                                <button type="button" class="btn mb-2 btn-info">Info</button>
+                                <button type="button" class="btn mb-2 btn-light">Light</button>
+                                <button type="button" class="btn mb-2 btn-dark">Dark</button>
+
+                                <button type="button" class="btn mb-2 btn-link">Link</button>
+                                <p class="form-text mb-2">Fancy larger or smaller buttons? Add
+                                    <code>.btn-lg</code>
+                                    or <code>.btn-sm</code> for additional sizes.</p>
+                                <button type="button" class="btn mb-2 btn-primary btn-sm">Primary</button>
+                                <button type="button" class="btn mb-2 btn-primary btn-lg">Primary</button>
+                                <p class="form-text mb-2">Block button</p>
+                                <div class="d-grid gap-2">
+                                    <button class="btn mb-2 btn-primary" type="button">Button</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Outline Buttons</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">In need of a button, but not the hefty background colors they
+                            bring? Replace the default modifier classes with the <code>.btn-outline-*</code>
+                            ones to
+                            remove all background images and colors on any button.</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn mb-2 btn-outline-primary"
+                                    disabled>Primary</button>
+                                <button type="button" class="btn mb-2 btn-outline-primary">Primary</button>
+                                <button type="button" class="btn mb-2 btn-outline-secondary">Secondary</button>
+                                <button type="button" class="btn mb-2 btn-outline-success">Success</button>
+                                <button type="button" class="btn mb-2 btn-outline-danger">Danger</button>
+                                <button type="button" class="btn mb-2 btn-outline-warning">Warning</button>
+                                <button type="button" class="btn mb-2 btn-outline-info">Info</button>
+                                <button type="button" class="btn mb-2 btn-outline-light">Light</button>
+                                <button type="button" class="btn mb-2 btn-outline-dark">Dark</button>
+                                <p class="form-text mb-2">Fancy larger or smaller buttons? Add
+                                    <code>.btn-lg</code>
+                                    or <code>.btn-sm</code> for additional sizes.</p>
+                                <button type="button"
+                                    class="btn mb-2 btn-outline-primary btn-sm">Primary</button>
+                                <button type="button"
+                                    class="btn mb-2 btn-outline-primary btn-lg">Primary</button>
+                                <p class="form-text mb-2">Block button</p>
+                                <div class="d-grid gap-2">
+                                    <button class="btn mb-2 btn-outline-primary" type="button">Button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Icon Buttons</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">
+                            You can easily create a button with icon on the left <code>.icon-left</code> or
+                            right
+                            <code>.icon-right</code> side
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn mb-2 icon-left btn-primary" disabled><i
+                                        class="ti-bar-chart"></i>Primary</button>
+                                <button type="button" class="btn mb-2 icon-left btn-primary "><i
+                                        class="ti-plus"></i>Primary</button>
+                                <button type="button" class="btn mb-2 icon-left btn-secondary"><i
+                                        class="ti-close"></i>Secondary</button>
+                                <button type="button" class="btn mb-2 icon-left btn-outline-success"><i
+                                        class="ti-check"></i>Success</button>
+                                <button type="button" class="btn mb-2 icon-left btn-outline-danger"><i
+                                        class="ti-trash"></i>Danger</button>
+                                <button type="button" class="btn mb-2 btn-warning icon-right">Warning<i
+                                        class="ti-alert"></i></button>
+                                <button type="button" class="btn mb-2 btn-info icon-right">Info<i
+                                        class="ti-info"></i></button>
+                                <button type="button" class="btn mb-2 btn-light icon-right">Light<i
+                                        class="ti-light"></i></button>
+                                <button type="button" class="btn mb-2 btn-dark icon-right">Dark<i
+                                        class="ti-light-bulb"></i></button>
+
+                                <button type="button" class="btn mb-2 icon-left btn-link"><i
+                                        class="ti-book"></i>Link</button>
+                                <p class="form-text mb-2">Fancy larger or smaller buttons? Add
+                                    <code>.btn-lg</code>
+                                    or <code>.btn-sm</code> for additional sizes.</p>
+                                <button type="button" class="btn mb-2 btn-primary btn-sm"><i
+                                        class="ti-trash"></i>Primary</button>
+                                <button type="button" class="btn mb-2 btn-primary icon-right btn-lg">Primary<i
+                                        class="ti-cup"></i></button>
+                                <p class="form-text mb-2">Icon only</p>
+                                <button type="button" class="btn mb-2 btn-sm btn-primary"><i
+                                        class="ti-plus"></i></button>
+                                <button type="button" class="btn mb-2 btn-secondary"><i
+                                        class="ti-close"></i></button>
+                                <button type="button" class="btn mb-2 btn-success"><i
+                                        class="ti-check"></i></button>
+                                <button type="button" class="btn mb-2 btn-danger"><i
+                                        class="ti-trash"></i></button>
+                                <button type="button" class="btn mb-2 btn-outline-warning"><i
+                                        class="ti-alert"></i></button>
+                                <button type="button" class="btn mb-2 btn-info btn-lg"><i
+                                        class="ti-info"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Square Buttons</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">
+                            Do you like the square buttons? Add <code> .rounded-0 </code>
+                            to change its shape.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn mb-2 btn-primary rounded-0"
+                                    disabled>Primary</button>
+                                <button type="button" class="btn mb-2 btn-primary rounded-0">Primary</button>
+                                <button type="button"
+                                    class="btn mb-2 btn-secondary rounded-0">Secondary</button>
+                                <button type="button" class="btn mb-2 btn-success rounded-0">Success</button>
+                                <button type="button" class="btn mb-2 btn-danger rounded-0">Danger</button>
+                                <button type="button" class="btn mb-2 btn-warning rounded-0">Warning</button>
+                                <button type="button" class="btn mb-2 btn-info rounded-0">Info</button>
+                                <button type="button" class="btn mb-2 btn-light rounded-0">Light</button>
+                                <button type="button" class="btn mb-2 btn-dark rounded-0">Dark</button>
+
+                                <button type="button" class="btn mb-2 btn-link">Link</button>
+                                <p class="form-text mb-2">Fancy larger or smaller buttons? Add
+                                    <code>.btn-lg</code>
+                                    or <code>.btn-sm</code> for additional sizes.</p>
+                                <button type="button"
+                                    class="btn mb-2 btn-primary btn-sm rounded-0">Primary</button>
+                                <button type="button"
+                                    class="btn mb-2 btn-primary btn-lg rounded-0">Primary</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Button Group</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Wrap a series of buttons with <code>.btn</code> in
+                            <code>.btn-group</code>.</p>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p class="form-text mb-2">Default style</p>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn mb-2 btn-primary">Left</button>
+                                    <button type="button" class="btn mb-2 btn-primary">Middle</button>
+                                    <button type="button" class="btn mb-2 btn-primary">Right</button>
+                                </div>
+                                <p class="form-text mb-2">Mixed style</p>
+                                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                    <button type="button" class="btn mb-2 btn-danger">Left</button>
+                                    <button type="button" class="btn mb-2 btn-warning">Middle</button>
+                                    <button type="button" class="btn mb-2 btn-success">Right</button>
+                                </div>
+                                <p class="form-text mb-2">Outline style</p>
+                                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                    <button type="button" class="btn mb-2 btn-outline-primary">Left</button>
+                                    <button type="button" class="btn mb-2 btn-outline-primary">Middle</button>
+                                    <button type="button" class="btn mb-2 btn-outline-primary">Right</button>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <p class="form-text mb-2">Using with checkbox</p>
+                                <div class="btn-group" role="group"
+                                    aria-label="Basic checkbox toggle button group">
+                                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                    <label class="btn mb-2 btn-outline-primary" for="btncheck1">Checkbox
+                                        1</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                    <label class="btn mb-2 btn-outline-primary" for="btncheck2">Checkbox
+                                        2</label>
+
+                                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                    <label class="btn mb-2 btn-outline-primary" for="btncheck3">Checkbox
+                                        3</label>
+                                </div>
+                                <p class="form-text mb-2">Using with radio</p>
+                                <div class="btn-group" role="group"
+                                    aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                        autocomplete="off" checked>
+                                    <label class="btn mb-2 btn-outline-primary" for="btnradio1">Radio 1</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                        autocomplete="off">
+                                    <label class="btn mb-2 btn-outline-primary" for="btnradio2">Radio 2</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3"
+                                        autocomplete="off">
+                                    <label class="btn mb-2 btn-outline-primary" for="btnradio3">Radio 3</label>
+                                </div>
+                                <p class="form-text mb-2">Combine sets of button groups into button toolbars for
+                                    more complex components. Use utility classes as needed to space out groups,
+                                    buttons, and more.</p>
+                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                    <div class="btn-group me-2" role="group" aria-label="First group">
+                                        <button type="button" class="btn mb-2 btn-primary">1</button>
+                                        <button type="button" class="btn mb-2 btn-primary">2</button>
+                                        <button type="button" class="btn mb-2 btn-primary">3</button>
+                                        <button type="button" class="btn mb-2 btn-primary">4</button>
+                                    </div>
+                                    <div class="btn-group me-2" role="group" aria-label="Second group">
+                                        <button type="button" class="btn mb-2 btn-secondary">5</button>
+                                        <button type="button" class="btn mb-2 btn-secondary">6</button>
+                                        <button type="button" class="btn mb-2 btn-secondary">7</button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Third group">
+                                        <button type="button" class="btn mb-2 btn-info">8</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="form-text mb-2">Instead of applying button sizing classes to every
+                                    button
+                                    in a group, just add <code>.btn-group-*</code> to each
+                                    <code>.btn-group</code>,
+                                    including each one when nesting multiple groups.</p>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn mb-2 btn-primary">Left</button>
+                                    <button type="button" class="btn mb-2 btn-primary">Middle</button>
+                                    <button type="button" class="btn mb-2 btn-primary">Right</button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn mb-2 btn-primary">Left</button>
+                                    <button type="button" class="btn mb-2 btn-primary">Middle</button>
+                                    <button type="button" class="btn mb-2 btn-primary">Right</button>
+                                </div>
+                                <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn mb-2 btn-primary">Left</button>
+                                    <button type="button" class="btn mb-2 btn-primary">Middle</button>
+                                    <button type="button" class="btn mb-2 btn-primary">Right</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="form-text mb-2">Place a <code>.btn-group</code> within another
+                                    <code>.btn-group</code> when you want dropdown menus mixed with a series of
+                                    buttons.</p>
+                                <div class="btn-group" role="group"
+                                    aria-label="Button group with nested dropdown">
+                                    <button type="button" class="btn btn-primary">1</button>
+                                    <button type="button" class="btn btn-primary">2</button>
+
+                                    <div class="btn-group" role="group">
+                                        <button id="btnGroupDrop1" type="button"
+                                            class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Dropdown
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="form-text mb-2">Vertical variation</p>
+                                <div class="btn-group-vertical" role="group"
+                                    aria-label="Button group with nested dropdown">
+                                    <button type="button" class="btn btn-primary">1</button>
+                                    <button type="button" class="btn btn-primary">2</button>
+
+                                    <div class="btn-group" role="group">
+                                        <button id="btnGroupDrop1" type="button"
+                                            class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Dropdown
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+
+{% endblock %}

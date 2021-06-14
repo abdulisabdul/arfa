@@ -1,0 +1,288 @@
+{% set title = 'Table Basic' %}
+{% set page = 'table-basic.html' %}
+{% extends "layouts/main.html" %}
+
+{% block css%}
+
+{% endblock %}
+{% block content %}
+<div class="main-content">
+    <div class="title">
+        Table
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Basic</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Using the most basic table markup, here’s how
+                            <code>.table</code>-based tables look in Bootstrap.</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Bordered</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Add
+                            <code>.table-bordered</code> for borders on all sides of the table and cells.</p>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Striped</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Use <code>.table-striped</code> to add zebra-striping to any
+                            table row within the <code>&lt;tbody&gt;</code>.</p>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Hover</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Use <code>.table-hover</code> for hover effect </p>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Small</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Add <code>.table-sm</code> to make any <code>.table</code>
+                            more compact by cutting all cell <code>padding</code> in half.</p>
+                        <table class="table table-sm table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Responsive</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text">Across every breakpoint, use <code>.table-responsive</code>  for horizontally scrolling tables.</p>
+                        <p class="form-text mb-2">For Different break point use <code>.table-responsive-sm</code> or <code>.table-responsive-md</code> or <code>.table-responsive-lg</code> or <code>.table-responsive-xl</code> or <code>.table-responsive-xxl</code> </p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+{% block js %}
+
+{% endblock %}

@@ -1,0 +1,148 @@
+.form-control,.form-select,
+.form-control-plaintext {
+  color: $gray-dark;
+  font-size: 0.9em;
+  /* padding: 18px 12px; */
+}
+.form-control-sm {
+  font-size: 0.8em;
+}
+.form-control-lg {
+  font-size: 1.2em;
+}
+
+/**
+* Date picker
+*/
+.input-group-append .btn {
+  height: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group-append .btn .gj-icon {
+  top: 1px !important;
+  left: 2px !important;
+}
+
+.dark .input-group-append .btn {
+  border: 1px solid #625f6e !important; 
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 6px $blue-light;
+  border-color: map-get($map: $theme-colors, $key: 'primary');
+}
+
+.form-control-plaintext:focus {
+  outline: none;
+}
+.form-label,
+.form-text {
+  color: $gray-extra-dark;
+  font-size: 0.8em;
+  margin-bottom: 0.2em;
+}
+.form-label ~ small {
+  font-style: italic;
+}
+
+.form-select {
+  color: $gray-dark;
+}
+
+.form-check-input:checked {
+  background-color: map-get($map: $theme-colors, $key: 'primary');
+  border-color: map-get($map: $theme-colors, $key: 'primary');
+  box-shadow: 0 0 6px map-get($map: $theme-colors, $key: 'primary');
+}
+
+.input-group-join {
+  .form-control {
+    transition: .1s border;
+    border-right: none;
+  }
+  .input-group-text {
+    transition: .1s border;
+    border-left-width: 0 !important;
+  }
+}
+.input-group-join:focus-within{
+  .form-control,.input-group-text{
+    box-shadow: none;
+    border-color: map-get($map: $theme-colors, $key: 'primary');
+  }
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.was-validated {
+  .form-control:invalid{
+    border-color: map-get($map: $theme-colors, $key:'danger' ) !important;
+    &:focus{
+      box-shadow: none !important;
+    }
+    +.input-group-text{
+      border-color: map-get($map: $theme-colors, $key:'danger' ) !important;
+    }
+  }
+  .input-group-text, .form-control:valid{
+    border-color: map-get($map: $theme-colors, $key:'success' ) !important;
+    &:focus{
+      box-shadow: none !important;
+    }
+  }
+}
+
+.input-group-text {
+  background: $white;
+  color: $gray-dark;
+}
+
+.input-group-text.light {
+  background: $gray-extra-light;
+  color: $gray-dark;
+}
+
+.input-group .btn {
+  z-index: 2;
+}
+.input-group .btn i {
+  text-align: center;
+  display: block;
+  padding: 5px;
+}
+
+.form-switch.lg {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  label {
+    display: block;
+  }
+  .form-check-input {
+    margin-top: 0;
+    height: 25px;
+    width: 40px;
+    margin-left: 0px;
+    background-color: $gray-extra-light;
+    &:checked {
+      background-color: map-get($map: $theme-colors, $key: 'primary');
+    }
+  }
+}
+.form-check-inline.lg {
+  .form-check-input.lg {
+    height: 20px;
+    width: 20px;
+  }
+  label {
+    margin-top: 2px;
+  }
+}

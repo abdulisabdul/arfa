@@ -1,0 +1,29 @@
+/* ========== FOOTER ========= */
+footer {
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding-left: 285px;
+    padding-right: 30px;
+    margin-top: 10px;
+    min-height: 50px;
+    font-size: 1em;
+    color: $gray-extra-dark;
+    transition: 0.3s;
+    width: 100%;
+    border-top: 1px solid $gray-light;
+  
+    &.sticky{
+      position: sticky ;
+      background: $white;
+      bottom: 0;
+      z-index: 9;
+      box-shadow: 0 0 5px $gray-light;
+      border-top: none;
+    }
+  }
+  body.collapse-sidebar footer {
+    padding-left: 110px;
+  }

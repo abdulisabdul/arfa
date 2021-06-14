@@ -1,0 +1,40 @@
+.modal {
+    .modal-content {
+      overflow: visible;
+    }
+    &-title {
+      font-weight: bold;
+    }
+    &-header {
+      background-color: $gray-extra-light;
+      border-bottom: none;
+      height: 3em;
+      .btn-close {
+        position: relative;
+        transform: translate(25px, -18px);
+        background: $white;
+        opacity: 1;
+        box-shadow: -2px 5px 20px $gray;
+        transition: all 0.2s;
+        border-radius: 25%;
+        &:hover {
+          // transform: translate(-8px, 8px);
+          border-radius: 50%;
+          transform: translate(25px, -18px) rotate(90deg);
+          box-shadow: none;
+        }
+        &::after {
+          content: "\e646";
+          font-family: "themify";
+          text-align: center;
+          display: block;
+          line-height: 1em;
+          color: $gray-dark;
+          font-size: 0.8em;
+        }
+      }
+    }
+    &-footer {
+      border-top-color: $gray-light;
+    }
+  }

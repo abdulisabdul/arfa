@@ -1,0 +1,336 @@
+{% set title = 'Element Alert' %}
+{% set page = 'element-alert.html' %}
+{% extends "layouts/main.html" %}
+
+{% block css%}
+<link rel="stylesheet" href="../node_modules/izitoast/dist/css/iziToast.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+    <div class="title">
+        Alert Bootstrap
+    </div>
+
+    <div class="content-wrapper">
+        <div class="row same-height">
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>
+                            Simple alert
+                        </h4>
+
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Alerts are available for any length of text, as well as an
+                            optional close button. For proper styling, use one of the eight
+                            <strong>required</strong> contextual classes (e.g., <code>.alert-success</code>). For
+                            inline dismissal, use the <a href="#dismissing">alerts JavaScript plugin</a>.</p>
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            A simple secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            A simple success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            A simple warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            A simple info alert—check it out!
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            A simple light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            A simple dark alert—check it out!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Link alert</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Use the <code>.alert-link</code> utility class to quickly provide
+                            matching colored links within any alert.</p>
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it
+                            a click if you like.
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give
+                            it a click if you like.
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it
+                            a click if you like.
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a
+                            click if you like.
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it
+                            a click if you like.
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a
+                            click if you like.
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a
+                            click if you like.
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a
+                            click if you like.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Additional content alert</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">Alerts can also contain additional HTML elements like headings,
+                            paragraphs and dividers.
+                        </p>
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Well done!</h4>
+                            <p>Aww yeah, you successfully read this important alert message. This example text is
+                                going to run a bit longer so that you can see how spacing within an alert works with
+                                this kind of content.</p>
+                            <hr>
+                            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things
+                                nice and tidy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Dismiss alert</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="form-text mb-2">add class <code>.alert-dismissible</code>, add attribute
+                            <code>data-bs-dismiss="alert"</code></p>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close">X</button>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close">X</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        Sweet Alert
+    </div>
+
+    <div class="content-wrapper">
+        <div class="row same-height">
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Basic</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" id="swall-basic" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Question</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-info" id="swall-question" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Success</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-success" id="swall-success" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">error</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-danger" id="swall-error" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Custom Html</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" id="swall-custom" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Confirmation</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" id="swall-confirmation" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Auto Close</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" id="swall-auto-close" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="title">
+        Izi Toast
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Basic</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" id="toast-basic" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Success</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-success" id="toast-success" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Warning</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-warning" id="toast-warning" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Error</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-danger" id="toast-error" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Bottom Right</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" id="toast-bottom-right" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Bottom Center</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" id="toast-bottom-center" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Bottom Left</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" id="toast-bottom-left" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="form-text mb-2 d-flex justify-content-center">Top Left</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn mb-2 btn-primary" id="toast-top-left" type="button">Try me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="../node_modules/izitoast/dist/js/iziToast.min.js"></script>
+<script src="../assets/js/page/alert.js"></script>
+{% endblock %}

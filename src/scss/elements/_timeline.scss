@@ -1,0 +1,59 @@
+.timeline-xs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .timeline-item {
+      border-left: 1px solid map-get($map: $theme-colors, $key: 'primary');
+      position: relative;
+      &:not(:last-child) {
+        padding-bottom: 15px;
+      }
+      a {
+        text-decoration: none;
+      }
+      &::before {
+        content: "";
+        background-color: map-get($map: $theme-colors, $key: 'primary');
+        box-shadow: 0 0 7px map-get($map: $theme-colors, $key: 'primary');
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        position: absolute;
+        left: -5px;
+        // top: 5px;
+      }
+      &.danger::before {
+        background-color: map-get($map: $theme-colors, $key: 'danger');
+        box-shadow: 0 0 7px map-get($map: $theme-colors, $key: 'danger');
+      }
+      &.success::before {
+        background-color: map-get($map: $theme-colors, $key: 'success');
+        box-shadow: 0 0 7px map-get($map: $theme-colors, $key: 'success');
+      }
+      &.warning::before {
+        background-color: map-get($map: $theme-colors, $key: 'warning');
+        box-shadow: 0 0 7px map-get($map: $theme-colors, $key: 'warning');
+      }
+      &.info::before {
+        background-color: map-get($map: $theme-colors, $key: 'info');
+        box-shadow: 0 0 7px map-get($map: $theme-colors, $key: 'info');
+      }
+  
+      &.success {
+        border-left-color: map-get($map: $theme-colors, $key: 'success');
+      }
+      &.danger {
+        border-left-color: map-get($map: $theme-colors, $key: 'danger');
+      }
+      &.warning {
+        border-left-color: map-get($map: $theme-colors, $key: 'warning');
+      }
+      &.info {
+        border-left-color: map-get($map: $theme-colors, $key: 'info');
+      }
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }

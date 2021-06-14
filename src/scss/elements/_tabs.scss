@@ -1,0 +1,24 @@
+.nav-tabs,
+.nav-pills {
+  .nav-link {
+    color: map-get($map: $theme-colors, $key: "primary");
+    &.disabled {
+      color: $gray;
+    }
+  }
+}
+.nav-pills {
+  .nav-link.active {
+    background-color: map-get($map: $theme-colors, $key: "primary");
+  }
+}
+
+.tab-pane {
+  margin-top: 1em;
+}
+
+.nav.flex-column ~ .tab-content {
+  .tab-pane {
+    margin-top: 0;
+  }
+}

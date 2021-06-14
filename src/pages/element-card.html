@@ -1,0 +1,315 @@
+{% set title = 'Element Card' %}
+{% set page = 'element-card.html' %}
+{% extends "layouts/main.html" %}
+
+{% block css%}
+
+{% endblock %}
+{% block content %}
+<div class="main-content">
+    <div class="title">
+        Card
+    </div>
+
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h4>Header</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eos
+                            facere impedit dolorem necessitatibus quidem non in, optio similique eveniet hic,
+                            consequatur, quo pariatur eum modi excepturi. Iusto, facilis totam.</p>
+                    </div>
+                    <div class="card-footer">
+                        Card footer
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                            recusandae deleniti provident nesciunt nam, omnis, officia beatae veniam eum nisi
+                            rem blanditiis. Explicabo facilis delectus cupiditate repudiandae ut.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="../assets/images/img-1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="title">
+        Card List Group
+    </div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white">
+                    <img src="../assets/images/img-1.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        Card Text Alignment
+    </div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-end mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        Card Navigation
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" aria-current="true"
+                                    href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1"
+                                    aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                aria-labelledby="home-tab">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to
+                                    additional content.</p>
+                                <a href="#" class="btn btn-primary">Go Home</a>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel"
+                                aria-labelledby="profile-tab">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to
+                                    additional content.</p>
+                                <a href="#" class="btn btn-primary">Go Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-pills card-header-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" aria-current="true"
+                                    href="#home-pills">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#profile-pills">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1"
+                                    aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-pills" role="tabpanel"
+                                aria-labelledby="home-tab">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to
+                                    additional content.</p>
+                                <a href="#" class="btn btn-primary">Go Home</a>
+                            </div>
+                            <div class="tab-pane fade" id="profile-pills" role="tabpanel"
+                                aria-labelledby="profile-tab">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to
+                                    additional content.</p>
+                                <a href="#" class="btn btn-primary">Go Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        Card Background & Color
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+            <div class="col-md-3">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+            <div class="col-md-3">
+                <div class="card text-primary border-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-secondary border-secondary mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-success border-success mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-warning border-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-info border-info mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-danger border-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+
+{% endblock %}

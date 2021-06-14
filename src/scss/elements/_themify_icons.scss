@@ -1,0 +1,19 @@
+@import "../theme_colors";
+.dark .icon-hover {
+    color: $gray;
+}
+.icon-hover {
+    display: inline-block !important;
+    width: calc(100%);
+    transition: font-size .2s;
+    // padding-bottom: .5em ;
+    cursor: pointer;
+    height: 2em;
+    &:hover{
+        font-size: 1.3em;
+    }
+    i {
+        color: map-get($theme-colors, "primary" );
+        margin-right: .3em;
+    }
+}

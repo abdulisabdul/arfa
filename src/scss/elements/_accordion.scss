@@ -1,0 +1,41 @@
+.accordion.accordion-space {
+  .accordion-item {
+    margin-bottom: 0.5em;
+    border-radius: 0.25em;
+    overflow: hidden;
+    &:not(:first-of-type){
+      border-top: 1px solid rgba(0,0,0,.125);
+    }
+  }
+  .accordion-button {
+    border-radius: 0;
+  }
+}
+.accordion-item {
+  .accordion-button {
+    color: $gray-dark;
+    padding: 0.7em;
+    &::after {
+      content: "\e64b";
+      font-family: "themify";
+      background: none;
+      font-size: 0.7em;
+      height: unset;
+      width: unset;
+    }
+    &:not(.collapsed) {
+      color: $dark;
+      background-color: $gray-light;
+      box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+      &::after {
+        color: map-get($map: $theme-colors, $key: "primary");
+        font-weight: bold;
+      }
+    }
+    &:focus {
+      border-color: none;
+      box-shadow: none;
+    }
+  }
+}
+

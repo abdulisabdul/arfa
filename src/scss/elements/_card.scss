@@ -1,0 +1,30 @@
+.card-body.small-padding {
+    padding: 0;
+  }
+  
+  .card {
+    box-shadow: 0 4px 24px 0 $gray-medium;
+    margin-bottom: 2em !important;
+    // border: none;
+    .card-header {
+      border-bottom: none;
+      padding: 1em;
+      background-color: transparent;
+      h4 {
+        margin-bottom: 0;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $gray-dark;
+      }
+      & + .card-body {
+        padding-top: 0;
+      }
+    }
+  
+    .card-footer {
+      border-top: none;
+    }
+  }
+  .card:not([class*="border"]) {
+    border: none;
+  }

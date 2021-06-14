@@ -1,0 +1,18 @@
+@mixin button-variant-bs($color: map-get($map: $theme-colors, $key: 'primary')) {
+  background-color: $color;
+  border-color: $color;
+  box-shadow: 0 0 4px $color;
+  &:hover {
+    background-color: darken($color: $color, $amount: 8%);
+    border-color: darken($color: $color, $amount: 8%);
+  }
+}
+@mixin button-variant-outline-bs($color: map-get($map: $theme-colors, $key: 'primary')) {
+  color: $color;
+  border-color: $color;
+  &:hover {
+    background-color: $color;
+    box-shadow: 0 0 4px $color;
+    color: #ffffff;
+  }
+}
