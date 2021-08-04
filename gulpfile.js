@@ -24,16 +24,9 @@ function compileHtml(source, onEnd, log = true) {
         version: '1.0.0',
         appName: 'Arfka'
       },
-      /**
-       * Nunjucks options   
-       */
       {
         trimBlocks: true,
         lstripBlocks: true,
-        /**
-         * Nunjucks filters
-         * @type {Object}
-         */
         filters: {
           is_active: (str, reg, page) => {
             reg = new RegExp(reg, 'gm');
@@ -67,12 +60,27 @@ function compileScss(source, onEnd, log = true) {
     })
     .pipe(rename({
       dirname: '',
-      extname: '.css'
+      extname: '.min.css'
     }))
     .pipe(postcss([
       autoprefixer(),
       cssnano()
     ]))
+    .pipe(dest('assets/css'))
+    .pipe(plumber.stop());
+
+  src(source)
+    .pipe(plumber())
+    .pipe(sass().on('error', sass.logError))
+    .on('error', console.error.bind(console))
+    .on('end', () => {
+      onEnd && onEnd.call(this);
+      log && _log('[SCSS] Finished', 'GREEN');
+    })
+    .pipe(rename({
+      dirname: '',
+      extname: '.css'
+    }))
     .pipe(dest('assets/css'))
     .pipe(plumber.stop());
 }
@@ -92,10 +100,6 @@ function watching() {
   runCompileScss();
   runCompileHtml();
 
-  /**
-   * BrowserSync initialization
-   * @type {Object}
-   */
   browserSync.init({
     server: {
       baseDir: "./"
@@ -104,14 +108,9 @@ function watching() {
     port: 8080
   });
 
-  /**
-   * Watch ${htmlDir}
-   */
   watch([
     'src/pages/*.html',
     'src/scss/*.scss',
-    // jsDir + '/**/*.js',
-    // imgDir + '/**/*.*',
   ]).on('change', (file) => {
     file = file.replace(/\\/g, nodePath.sep);
 
@@ -121,20 +120,11 @@ function watching() {
       });
     }
 
-    // if(file.indexOf('layouts') > -1 && file.indexOf('.html') > -1) {
-    //   compileHtml(htmlDir + '/*.html', () => {
-    //     return browserSync.reload();
-    //   });
-    // }
     if (file.indexOf('.html') > -1) {
       compileHtml(file, () => {
         return browserSync.reload();
       });
     }
-
-    // if(file.indexOf(jsDir) > -1 || file.indexOf(imgDir) > -1) {
-    //   return browserSync.reload();
-    // }
   });
 }
 

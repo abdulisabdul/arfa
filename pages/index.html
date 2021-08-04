@@ -18,9 +18,9 @@
 <link rel="stylesheet" href="../node_modules/chart.js/dist/Chart.min.css">
     <!-- End CSS  -->
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/bootstrap-override.css">
-    <link rel="stylesheet" id="theme-color" href="../assets/css/dark.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-override.min.css">
+    <link rel="stylesheet" id="theme-color" href="../assets/css/dark.min.css">
 </head>
 
 <body>
@@ -35,6 +35,88 @@
                 <div class="header-content">
                     <div class="notification dropdown">
                         <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                        <ul class="dropdown-menu medium">
+                            <li class="menu-header">
+                                <a class="dropdown-item" href="#">Message</a>
+                            </li>
+                            <li class="menu-content ps-menu">
+                                <a href="#">
+                                    <div class="message-image">
+                                        <img src="../assets/images/avatar1.png" class="rounded-circle w-100" alt="user1">
+                                    </div>
+                                    <div class="message-content read">
+                                        <div class="subject">
+                                            John
+                                        </div>
+                                        <div class="body">
+                                            Please call me at 9pm
+                                        </div>
+                                        <div class="time">Just now</div>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="message-image">
+                                        <img src="../assets/images/avatar2.png" class="rounded-circle w-100" alt="user1">
+                                    </div>
+                                    <div class="message-content">
+                                        <div class="subject">
+                                            Michele
+                                        </div>
+                                        <div class="body">
+                                            Please come to my party
+                                        </div>
+                                        <div class="time">3 hours ago</div>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="message-image">
+                                        <img src="../assets/images/avatar1.png" class="rounded-circle w-100" alt="user1">
+                                    </div>
+                                    <div class="message-content read">
+                                        <div class="subject">
+                                            Brad
+                                        </div>
+                                        <div class="body">
+                                            I have something to discuss, please call me soon
+                                        </div>
+                                        <div class="time">3 hours ago</div>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="message-image">
+                                        <img src="../assets/images/avatar2.png" class="rounded-circle w-100" alt="user1">
+                                    </div>
+                                    <div class="message-content">
+                                        <div class="subject">
+                                            Anel
+                                        </div>
+                                        <div class="body">
+                                            Sorry i'm late
+                                        </div>
+                                        <div class="time">8 hours ago</div>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="message-image">
+                                        <img src="../assets/images/avatar2.png" class="rounded-circle w-100" alt="user1">
+                                    </div>
+                                    <div class="message-content">
+                                        <div class="subject">
+                                            Mary
+                                        </div>
+                                        <div class="body">
+                                            Please answer my question last night
+                                        </div>
+                                        <div class="time">Last month</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="notification dropdown">
+                        <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="far fa-bell"></i>
                             <span class="badge">12</span>
                         </a>
@@ -44,76 +126,48 @@
                             </li>
                             <li class="menu-content ps-menu">
                                 <a href="#">
-                                    <img src="https://sahabatperubahan.com/wp-content/uploads/2021/03/placeholder-profile-sq.jpg"
-                                        class="image-notification" alt="user1">
-                                    <div class="message-content">
-                                        <div class="subject">
-                                            Invitation
-                                        </div>
+                                    <div class="message-icon text-danger">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <div class="message-content read">
                                         <div class="body">
-                                            There's incoming event you have attend, don't forget!!
+                                            There's incoming event, don't miss it!!
                                         </div>
+                                        <div class="time">Just now</div>
                                     </div>
                                 </a>
                                 <a href="#">
-                                    <img src="https://sahabatperubahan.com/wp-content/uploads/2021/03/placeholder-profile-sq.jpg"
-                                        class="image-notification" alt="user1">
-                                    <div class="message-content">
-                                        <div class="subject">
-                                            Registration
-                                        </div>
+                                    <div class="message-icon text-info">
+                                        <i class="fas fa-info"></i>
+                                    </div>
+                                    <div class="message-content read">
                                         <div class="body">
-                                            You have to register a new account
+                                            Your licence will expired soon
                                         </div>
+                                        <div class="time">3 hours ago</div>
                                     </div>
                                 </a>
                                 <a href="#">
-                                    <img src="https://sahabatperubahan.com/wp-content/uploads/2021/03/placeholder-profile-sq.jpg"
-                                        class="image-notification" alt="user1">
-                                    <div class="message-content">
-                                        <div class="subject">
-                                            Warning
-                                        </div>
-                                        <div class="body">
-                                            There's incoming event you have attend
-                                        </div>
+                                    <div class="message-icon text-success">
+                                        <i class="fas fa-check"></i>
                                     </div>
-                                </a>
-                                <a href="#">
-                                    <img src="https://sahabatperubahan.com/wp-content/uploads/2021/03/placeholder-profile-sq.jpg"
-                                        class="image-notification" alt="user1">
                                     <div class="message-content">
-                                        <div class="subject">
-                                            Invitation
-                                        </div>
                                         <div class="body">
-                                            There's incoming event you have attend
+                                            Successfully register new user
                                         </div>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <img src="https://sahabatperubahan.com/wp-content/uploads/2021/03/placeholder-profile-sq.jpg"
-                                        class="image-notification" alt="user1">
-                                    <div class="message-content">
-                                        <div class="subject">
-                                            Invitation
-                                        </div>
-                                        <div class="body">
-                                            There's incoming event you have attend
-                                        </div>
+                                        <div class="time">8 hours ago</div>
                                     </div>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="dropdown">
+                    <div class="dropdown dropdown-menu-end">
                         <a href="#" class="user-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="label">
-                                <span>John Doe</span>
-                                <span>Admin</span>
+                                <span></span>
+                                <div>Admin</div>
                             </div>
-                            <img class="img-user" src="https://img.icons8.com/bubbles/2x/user-male.png" alt="user"
-                                srcset="">
+                            <img class="img-user" src="../assets/images/avatar1.png" alt="user"srcset="">
                         </a>
                         <ul class="dropdown-menu small">
                             <!-- <li class="menu-header">
@@ -169,15 +223,6 @@
                     </li>
                     <li>
                         <a href="#" class="main-menu has-dropdown">
-                            <i class="ti-bar-chart"></i>
-                            <span>Charts</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="#" class="link"><span>Detail</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="main-menu has-dropdown">
                             <i class="ti-desktop"></i>
                             <span>UI Elements</span>
                         </a>
@@ -200,6 +245,9 @@
                         <ul class="sub-menu ">
                             <li><a href="form-element.html" class="link">
                                     <span>Form Element</span></a>
+                            </li>
+                            <li><a href="form-datepicker.html" class="link">
+                                    <span>Datepicker</span></a>
                             </li>
                             <li><a href="form-select2.html" class="link">
                                     <span>Select2</span></a>
@@ -247,22 +295,17 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#" class="main-menu has-dropdown">
-                            <i class="ti-crown"></i>
-                            <span>Component</span>
+                        <a href="charts.html" class="link">
+                            <i class="ti-home"></i>
+                            <span>Charts</span>
                         </a>
-                        <ul class="sub-menu">
-                            <li><a href="#" class="link">Sub Menu</a></li>
-                            <li><a href="#" class="link">Sub Menu</a></li>
-                            <li><a href="#" class="link">Sub Menu</a></li>
-                        </ul>
                     </li>
                 </ul>
             </div>
         </nav>        
 <div class="main-content">
-    <div class="header-content">
-        <div class="title">Title</div>
+    <div class="title">
+        Dashboard
     </div>
     <div class="content-wrapper">
         <div class="row same-height">
@@ -273,7 +316,6 @@
                     </div>
                     <div class="card-body">
                         <canvas id="myChart" height="642" width="1388"></canvas>
-
                     </div>
                 </div>
             </div>
@@ -401,7 +443,7 @@
                                     </div>
                                     <p>
                                         <a class="text-info" href="">
-                                            Steven
+                                            Bambang
                                         </a>
                                         has completed his account.
                                     </p>
@@ -459,7 +501,7 @@
                                     <p>
                                         Lunch with
                                         <a class="text-info" href="">
-                                            Nicole
+                                            Mba Inem
                                         </a>
                                         .
                                     </p>
@@ -493,50 +535,50 @@
                                 <li class="self">
                                     <div class="message">
                                         <div class="message-name">
-                                            Peter Clark
+                                            Mas Bambang
                                         </div>
                                         <div class="message-text">
-                                            Hi, Nicole
+                                            Hi, Mba Inem
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar1.png" alt="">
                                         </div>
                                     </div>
                                     <div class="message">
                                         <div class="message-name">
-                                            Nicole Bell
+                                            Mba Inem
                                         </div>
                                         <div class="message-text">
                                             How are you?
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar1.png" alt="">
                                         </div>
                                     </div>
                                 </li>
                                 <li class="other">
                                     <div class="message">
                                         <div class="message-name">
-                                            Nicole Bell
+                                            Mba Inem
                                         </div>
                                         <div class="message-text">
                                             Hi, i am good
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-2.jpg" alt="">
+                                            <img src="../assets/images/avatar2.png" alt="">
                                         </div>
                                     </div>
                                 </li>
                                 <li class="self">
                                     <div class="message">
                                         <div class="message-name">
-                                            Peter Clark
+                                            Mas Bambang
                                         </div>
                                         <div class="message-text">
                                             Glad to see you ;)
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar1.png" alt="">
                                         </div>
                                     </div>
                                 </li>
@@ -546,13 +588,13 @@
                                 <li class="other">
                                     <div class="message">
                                         <div class="message-name">
-                                            Nicole Bell
+                                            Mba Inem
                                         </div>
                                         <div class="message-text">
                                             What do you think about my new Dashboard?
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-2.jpg" alt="">
+                                            <img src="../assets/images/avatar2.png" alt="">
                                         </div>
                                     </div>
                                 </li>
@@ -562,48 +604,48 @@
                                 <li class="other">
                                     <div class="message">
                                         <div class="message-name">
-                                            Nicole Bell
+                                            Mba Inem
                                         </div>
                                         <div class="message-text">
                                             Alo...
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-2.jpg" alt="">
+                                            <img src="../assets/images/avatar2.png" alt="">
                                         </div>
                                     </div>
                                     <div class="message">
                                         <div class="message-name">
-                                            Nicole Bell
+                                            Mba Inem
                                         </div>
                                         <div class="message-text">
                                             Are you there?
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-2.jpg" alt="">
+                                            <img src="../assets/images/avatar2.png" alt="">
                                         </div>
                                     </div>
                                 </li>
                                 <li class="self">
                                     <div class="message">
                                         <div class="message-name">
-                                            Peter Clark
+                                            Mas Bambang
                                         </div>
                                         <div class="message-text">
                                             Hi, i am here
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar1.png" alt="">
                                         </div>
                                     </div>
                                     <div class="message">
                                         <div class="message-name">
-                                            Nicole Bell
+                                            Mba Inem
                                         </div>
                                         <div class="message-text">
                                             Your Dashboard is great
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar1.png" alt="">
                                         </div>
                                     </div>
                                 </li>
@@ -613,87 +655,48 @@
                                 <li class="other">
                                     <div class="message">
                                         <div class="message-name">
-                                            Nicole Bell
+                                            Mba Inem
                                         </div>
                                         <div class="message-text">
-                                            How does the binding and digesting work in AngularJS?, Peter?
+                                            How does the binding and digesting work in ReactJS?, Bang?
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-2.jpg" alt="">
+                                            <img src="../assets/images/avatar2.png" alt="">
                                         </div>
                                     </div>
                                 </li>
                                 <li class="self">
                                     <div class="message">
                                         <div class="message-name">
-                                            Peter Clark
+                                            Mas Bambang
                                         </div>
                                         <div class="message-text">
                                             oh that's your question?
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar1.png" alt="">
                                         </div>
                                     </div>
                                     <div class="message">
                                         <div class="message-name">
-                                            Peter Clark
+                                            Mas Bambang
                                         </div>
                                         <div class="message-text">
                                             little reduntant, no?
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
+                                            <img src="../assets/images/avatar1.png" alt="">
                                         </div>
                                     </div>
                                     <div class="message">
                                         <div class="message-name">
-                                            Peter Clark
+                                            Mas Bambang
                                         </div>
                                         <div class="message-text">
                                             literally we get the question daily
                                         </div>
                                         <div class="message-avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="other">
-                                    <div class="message">
-                                        <div class="message-name">
-                                            Nicole Bell
-                                        </div>
-                                        <div class="message-text">
-                                            I know. I, however, am not a nerd, and want to know
-                                        </div>
-                                        <div class="message-avatar">
-                                            <img src="assets/images/avatar-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="self">
-                                    <div class="message">
-                                        <div class="message-name">
-                                            Peter Clark
-                                        </div>
-                                        <div class="message-text">
-                                            for this type of question, wouldn't it be better to try Google?
-                                        </div>
-                                        <div class="message-avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="other">
-                                    <div class="message">
-                                        <div class="message-name">
-                                            Nicole Bell
-                                        </div>
-                                        <div class="message-text">
-                                            Lucky for us :)
-                                        </div>
-                                        <div class="message-avatar">
-                                            <img src="assets/images/avatar-2.jpg" alt="">
+                                            <img src="../assets/images/avatar1.png" alt="">
                                         </div>
                                     </div>
                                 </li>
@@ -777,7 +780,7 @@
         </div> 
 
         <footer>
-            COPYRIGHT © 2020 &nbsp <a href="#" class="ml-1"> Mulai Dari Null</a> <span> . All rights Reserved</span>
+            COPYRIGHT © 2020 &nbsp <a href="https://www.youtube.com/c/mulaidarinull" target="_blank" class="ml-1"> Mulai Dari Null </a> <span> . All rights Reserved</span>
         </footer>
         <div class="overlay action-toggle">
         </div>
@@ -788,7 +791,7 @@
     <!-- js for this page only -->
 <script src="../node_modules/chart.js/dist/chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script src="../assets/js/page/index.js"></script>
+<script src="../../assets/js/page/index.js"></script>
     <!-- ======= -->
     <script src="../assets/js/main.js"></script>
     <script>

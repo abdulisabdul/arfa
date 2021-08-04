@@ -81,7 +81,10 @@ body.dark {
     }
     .header-content {
       span,
-      .notification a i {
+      .notification > a > i {
+        color: $gray;
+      }
+      .user-dropdown .label div {
         color: $gray;
       }
     }
@@ -104,14 +107,6 @@ body.dark {
     background: $dark;
     > .title {
       color: $gray;
-    }
-    .card-body {
-      > p {
-        color: $gray;
-      }
-      background: $dark-secondary;
-      box-shadow: none;
-      
     }
   }
   .settings {
@@ -221,6 +216,33 @@ body.dark {
     color: $gray;
   }
 
+  .datepicker {
+    .day,
+    .dow,
+    .datepicker-switch {
+      color: $gray-medium;
+    }
+    .today.day {
+      color: $dark;
+    }
+    .new.day,
+    .old.day {
+      color: $gray-dark;
+    }
+  }
+
+  // ========= message
+
+  .message-bar {
+    background-color: $dark-secondary;
+    textarea {
+      background: $dark;
+      border: 1px solid $gray-dark;
+      outline: none;
+      color: $gray;
+    }
+  }
+
   // ======= Drop down
   .dropdown-menu {
     background: $dark-secondary;
@@ -229,6 +251,7 @@ body.dark {
     .menu-content,
     .menu-header {
       .subject,
+      .body,
       .description {
         color: $gray;
       }
@@ -239,17 +262,30 @@ body.dark {
         }
       }
     }
+    // .menu-content{
+    //   @each $class, $color in $theme-colors {
+    //     .message-icon .text-#{$class} {
+    //       color: $color !;
+    //     }
+    //   }
+    // }
     .dropdown-item {
       color: $gray;
+    }
+    .message-content {
+      &.read {
+        .subject,
+        .body {
+          color: $gray-extra-dark;
+        }
+      }
     }
   }
 
   // ======== Card ========
+
   .card {
     box-shadow: none;
-  }
-  .card,
-  .card .card-header {
     background-color: $dark-secondary;
     color: $gray;
     h4 {
@@ -277,19 +313,44 @@ body.dark {
       border-color: $gray-dark;
     }
   }
-  // ========== swal ======
-  .dark {
-    .swal2-popup {
-      background-color: $dark-secondary;
-    }
-    .swal2-title,
-    .swal2-content {
-      color: $gray;
-    }
-  }
 
   // ====== Alert =====
-  @import "elements/alert_dark";
+  @each $class, $color in $theme-colors {
+    .alert-#{$class} {
+      background-color: rgba($color, 5%);
+      border-color: rgba($color, 5%);
+      box-shadow: 0 0 2px $color;
+      font-weight: bold;
+      color: lighten($color: $color, $amount: 0);
+      a {
+        color: lighten($color: $color, $amount: 8);
+        font-weight: bold;
+      }
+    }
+    @if $class == dark {
+      .alert-#{$class} {
+        background-color: rgba($color, 50%);
+        border-color: rgba($color, 5%);
+        box-shadow: 0 0 2px $color;
+        // font-weight: bold;
+        color: $gray;
+      }
+    }
+  }
+  
+  // ========== swal ======
+  
+  .swal2-popup {
+    background-color: $dark;
+  }
+  .swal2-title,
+  .swal2-content {
+    color: $gray !important;
+  }
+  
+  .swal2-popup {
+    background-color: $dark;
+  }
 
   // =============== modal =========
   .modal {
@@ -327,14 +388,15 @@ body.dark {
     .list-group-item {
       background: $dark-secondary;
       color: $gray;
-      border: 1px solid $gray-extra-dark;
+      border-color: $gray-extra-dark;
       &.active {
         background: $dark;
       }
     }
     @each $class, $color in $theme-colors {
       .list-group-item-#{$class} {
-        background: rgba($color, 30%);
+        background: rgba($color, 20%);
+        color: rgba($color, 100%);
       }
     }
   }
@@ -368,7 +430,7 @@ body.dark {
       color: $gray;
       padding: 0.7em;
       &:not(.collapsed) {
-        color: map-get($map: $theme-colors, $key:'light' );
+        color: map-get($map: $theme-colors, $key: "light");
         background-color: $dark;
         box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
         &::after {
@@ -381,9 +443,9 @@ body.dark {
       }
     }
   }
-  .accordion.accordion-space{
+  .accordion.accordion-space {
     .accordion-item {
-      &:not(:first-of-type){
+      &:not(:first-of-type) {
         border-top: 1px solid $gray-extra-dark;
       }
     }

@@ -3,8 +3,6 @@
 {% extends "layouts/main.html" %}
 
 {% block css%}
-<link rel="stylesheet" href="../node_modules/gijgo/css/gijgo.min.css">
-<!-- <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" /> -->
 {% endblock %}
 {% block content %}
 <div class="main-content">
@@ -22,12 +20,6 @@
                         <div class="mb-3">
                             <label for="basicInput" class="form-label">Basic Input</label>
                             <input type="text" placeholder="Input Here" class="form-control" id="basicInput">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-3">
-                            <label for="datepicker" class="form-label">Date Picker</label>
-                            <input id="datepicker" name="datepicker" readonly class="form-control" />
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -727,16 +719,5 @@
 </div>
 {% endblock %}
 {% block js %}
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/gijgo/js/gijgo.min.js"></script>
-<!-- <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script> -->
-<script>
 
-        $('#datepicker').datepicker({
-            uiLibrary: 'bootstrap4',
-            format: 'yyyy-mm-dd'
-        });
-
-
-</script>
 {% endblock %}

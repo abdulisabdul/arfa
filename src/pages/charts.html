@@ -1,0 +1,144 @@
+{% set title = 'Charts' %}
+{% set page = 'charts.html' %}
+{% extends "layouts/main.html" %}
+
+{% block css%}
+<link rel="stylesheet" href="../node_modules/chart.js/dist/Chart.min.css">
+{% endblock %}
+{% block content %}
+<div class="main-content">
+    <div class="title">
+        ChartsJS
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Monthly Sales</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <canvas id="lineChart" height="842" width="1388"></canvas>
+                            </div>
+                            <div class="col-md-5">
+                                <p class="mb-2">
+                                    A line chart is a way of plotting data points on a line.
+                                    Often, it is used to show trend data, and the comparison of two data sets.
+                                </p>
+                                <p>
+                                    The line chart requires an array of labels for each of the data points. This is
+                                    shown on the X axis. The data for line charts is broken up into an array of
+                                    datasets. Each dataset has a colour for the fill, a colour for the line and colours
+                                    for the points and strokes of the points. These colours are strings just like CSS.
+                                    You can use RGBA, RGB, HEX or HSL notation.
+                                </p>
+                                <p>
+                                    The label key on each dataset is optional, and can be used when generating a scale
+                                    for the chart.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Bar Chart</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p class="mb-2">
+                                    A bar chart is a way of showing data as bars.
+                                    It is sometimes used to show trend data, and the comparison of multiple data sets
+                                    side by side.
+                                </p>
+                                <p>
+                                    The bar chart has the a very similar data structure to the line chart, and has an
+                                    array of datasets, each with colours and an array of data. Again, colours are in CSS
+                                    format.
+                                    We have an array of labels too for display. In the example, we are showing the same
+                                    data as the previous line chart example.
+                                </p>
+                                <p>
+                                    The label key on each dataset is optional, and can be used when generating a scale
+                                    for the chart.
+                                </p>
+                            </div>
+                            <div class="col-md-7">
+                                <canvas id="barChart" height="842" width="1388"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Radar Chart</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <canvas id="radarChart" height="842" width="1388"></canvas>
+                            </div>
+                            <div class="col-md-5">
+                                <p>
+                                    A radar chart is a way of showing multiple data points and the variation between
+                                    them.
+                                </p>
+                                <p>
+                                    They are often useful for comparing the points of two or more different data sets.
+                                </p>
+                                <p>
+                                    For a radar chart, to provide context of what each point means, we include an array
+                                    of strings that show around each point in the chart.
+                                    For the radar chart data, we have an array of datasets. Each of these is an object,
+                                    with a fill colour, a stroke colour, a colour for the fill of each point, and a
+                                    colour for the stroke of each point. We also have an array of data values.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        ApexCharts
+    </div>
+    <div class="content-wrapper">
+        <div class="row same-height">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="apex-chart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="apex-chart-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+{% block js %}
+<script src="../node_modules/chart.js/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="../assets/js/page/charts.js"></script>
+{% endblock %}
+{% block runjs %}
+{% endblock %}

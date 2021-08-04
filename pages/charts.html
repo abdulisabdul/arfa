@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Element Card &mdash; Arfka</title>
+    <title>Charts &mdash; Arfka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
 
     <!-- CSS for this page only -->
-
+<link rel="stylesheet" href="../node_modules/chart.js/dist/Chart.min.css">
     <!-- End CSS  -->
 
     <link rel="stylesheet" href="../assets/css/style.min.css">
@@ -221,16 +221,16 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="active open">
+                    <li>
                         <a href="#" class="main-menu has-dropdown">
                             <i class="ti-desktop"></i>
                             <span>UI Elements</span>
                         </a>
-                        <ul class="sub-menu expand">
+                        <ul class="sub-menu ">
                             <li><a href="element-ui.html" class="link"><span>Elements</span></a></li>
                             <li><a href="element-accordion.html" class="link"><span>Accordion</span></a></li>
                             <li><a href="element-tabs-collapse.html" class="link"><span>Tabs & Collapse</span></a></li>
-                            <li class="active"><a href="element-card.html" class="link"><span>Card</span></a></li>
+                            <li><a href="element-card.html" class="link"><span>Card</span></a></li>
                             <li><a href="element-button.html" class="link"><span>Buttons</span></a></li>
                             <li><a href="element-alert.html" class="link"><span>Alert</span></a></li>
                             <li><a href="element-themify-icons.html" class="link"><span>Themify Icons</span></a></li>
@@ -294,7 +294,7 @@
                             <li><a href="table-datatables.html" class="link"><span>DataTables</span></a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="charts.html" class="link">
                             <i class="ti-home"></i>
                             <span>Charts</span>
@@ -305,192 +305,102 @@
         </nav>        
 <div class="main-content">
     <div class="title">
-        Card
-    </div>
-
-    <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h4>Header</h4>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eos
-                            facere impedit dolorem necessitatibus quidem non in, optio similique eveniet hic,
-                            consequatur, quo pariatur eum modi excepturi. Iusto, facilis totam.</p>
-                    </div>
-                    <div class="card-footer">
-                        Card footer
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-                            recusandae deleniti provident nesciunt nam, omnis, officia beatae veniam eum nisi
-                            rem blanditiis. Explicabo facilis delectus cupiditate repudiandae ut.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <img src="../assets/images/img-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <div class="title">
-        Card List Group
-    </div>
-    <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-dark text-white">
-                    <img src="../assets/images/img-1.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="title">
-        Card Text Alignment
-    </div>
-    <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-end mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="title">
-        Card Navigation
+        ChartsJS
     </div>
     <div class="content-wrapper">
         <div class="row same-height">
-            <div class="col-md-6">
-                <div class="card text-center">
+            <div class="col-md-12">
+                <div class="card">
                     <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" aria-current="true"
-                                    href="#home">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1"
-                                    aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
+                        <h4>Monthly Sales</h4>
                     </div>
                     <div class="card-body">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel"
-                                aria-labelledby="home-tab">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Go Home</a>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <canvas id="lineChart" height="842" width="1388"></canvas>
                             </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel"
-                                aria-labelledby="profile-tab">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Go Profile</a>
+                            <div class="col-md-5">
+                                <p class="mb-2">
+                                    A line chart is a way of plotting data points on a line.
+                                    Often, it is used to show trend data, and the comparison of two data sets.
+                                </p>
+                                <p>
+                                    The line chart requires an array of labels for each of the data points. This is
+                                    shown on the X axis. The data for line charts is broken up into an array of
+                                    datasets. Each dataset has a colour for the fill, a colour for the line and colours
+                                    for the points and strokes of the points. These colours are strings just like CSS.
+                                    You can use RGBA, RGB, HEX or HSL notation.
+                                </p>
+                                <p>
+                                    The label key on each dataset is optional, and can be used when generating a scale
+                                    for the chart.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card text-center">
+            <div class="col-md-12">
+                <div class="card">
                     <div class="card-header">
-                        <ul class="nav nav-pills card-header-pills">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" aria-current="true"
-                                    href="#home-pills">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#profile-pills">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1"
-                                    aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
+                        <h4>Bar Chart</h4>
                     </div>
                     <div class="card-body">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home-pills" role="tabpanel"
-                                aria-labelledby="home-tab">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Go Home</a>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p class="mb-2">
+                                    A bar chart is a way of showing data as bars.
+                                    It is sometimes used to show trend data, and the comparison of multiple data sets
+                                    side by side.
+                                </p>
+                                <p>
+                                    The bar chart has the a very similar data structure to the line chart, and has an
+                                    array of datasets, each with colours and an array of data. Again, colours are in CSS
+                                    format.
+                                    We have an array of labels too for display. In the example, we are showing the same
+                                    data as the previous line chart example.
+                                </p>
+                                <p>
+                                    The label key on each dataset is optional, and can be used when generating a scale
+                                    for the chart.
+                                </p>
                             </div>
-                            <div class="tab-pane fade" id="profile-pills" role="tabpanel"
-                                aria-labelledby="profile-tab">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Go Profile</a>
+                            <div class="col-md-7">
+                                <canvas id="barChart" height="842" width="1388"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Radar Chart</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <canvas id="radarChart" height="842" width="1388"></canvas>
+                            </div>
+                            <div class="col-md-5">
+                                <p>
+                                    A radar chart is a way of showing multiple data points and the variation between
+                                    them.
+                                </p>
+                                <p>
+                                    They are often useful for comparing the points of two or more different data sets.
+                                </p>
+                                <p>
+                                    For a radar chart, to provide context of what each point means, we include an array
+                                    of strings that show around each point in the chart.
+                                    For the radar chart data, we have an array of datasets. Each of these is an object,
+                                    with a fill colour, a stroke colour, a colour for the fill of each point, and a
+                                    colour for the stroke of each point. We also have an array of data values.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -499,112 +409,27 @@
         </div>
     </div>
     <div class="title">
-        Card Background & Color
+        ApexCharts
     </div>
     <div class="content-wrapper">
         <div class="row same-height">
-            <div class="col-md-3">
-                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="col-md-6">
+                <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                        <div id="apex-chart"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+            <div class="col-md-6">
+                <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                        <div id="apex-chart-bar"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="content-wrapper">
-        <div class="row same-height">
-            <div class="col-md-3">
-                <div class="card text-primary border-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-secondary border-secondary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-success border-success mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-warning border-warning mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-info border-info mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-danger border-danger mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>
 
         <div class="settings">
@@ -675,7 +500,9 @@
     <script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
 
     <!-- js for this page only -->
-
+<script src="../node_modules/chart.js/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="../assets/js/page/charts.js"></script>
     <!-- ======= -->
     <script src="../assets/js/main.js"></script>
     <script>

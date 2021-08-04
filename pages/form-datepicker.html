@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Element Card &mdash; Arfka</title>
+    <title>Form Datepicker &mdash; Arfka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
 
     <!-- CSS for this page only -->
-
+<link rel="stylesheet" href="../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <!-- End CSS  -->
 
     <link rel="stylesheet" href="../assets/css/style.min.css">
@@ -221,32 +221,32 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="active open">
+                    <li>
                         <a href="#" class="main-menu has-dropdown">
                             <i class="ti-desktop"></i>
                             <span>UI Elements</span>
                         </a>
-                        <ul class="sub-menu expand">
+                        <ul class="sub-menu ">
                             <li><a href="element-ui.html" class="link"><span>Elements</span></a></li>
                             <li><a href="element-accordion.html" class="link"><span>Accordion</span></a></li>
                             <li><a href="element-tabs-collapse.html" class="link"><span>Tabs & Collapse</span></a></li>
-                            <li class="active"><a href="element-card.html" class="link"><span>Card</span></a></li>
+                            <li><a href="element-card.html" class="link"><span>Card</span></a></li>
                             <li><a href="element-button.html" class="link"><span>Buttons</span></a></li>
                             <li><a href="element-alert.html" class="link"><span>Alert</span></a></li>
                             <li><a href="element-themify-icons.html" class="link"><span>Themify Icons</span></a></li>
                             <li><a href="element-modal.html" class="link"><span>Modal</span></a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="active open">
                         <a href="#" class="main-menu has-dropdown">
                             <i class="ti-book"></i>
                             <span>Form</span>
                         </a>
-                        <ul class="sub-menu ">
+                        <ul class="sub-menu expand">
                             <li><a href="form-element.html" class="link">
                                     <span>Form Element</span></a>
                             </li>
-                            <li><a href="form-datepicker.html" class="link">
+                            <li class="active"><a href="form-datepicker.html" class="link">
                                     <span>Datepicker</span></a>
                             </li>
                             <li><a href="form-select2.html" class="link">
@@ -305,301 +305,46 @@
         </nav>        
 <div class="main-content">
     <div class="title">
-        Card
-    </div>
-
-    <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h4>Header</h4>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eos
-                            facere impedit dolorem necessitatibus quidem non in, optio similique eveniet hic,
-                            consequatur, quo pariatur eum modi excepturi. Iusto, facilis totam.</p>
-                    </div>
-                    <div class="card-footer">
-                        Card footer
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-                            recusandae deleniti provident nesciunt nam, omnis, officia beatae veniam eum nisi
-                            rem blanditiis. Explicabo facilis delectus cupiditate repudiandae ut.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <img src="../assets/images/img-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <div class="title">
-        Card List Group
+        Form Element
     </div>
     <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                    </ul>
-                </div>
+        <div class="card">
+            <div class="card-header">
+                <h4>Default Form</h4>
             </div>
-            <div class="col-md-4">
-                <div class="card bg-dark text-white">
-                    <img src="../assets/images/img-1.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="datepicker-icon" class="form-label">Date Picker Inline</label>
+                        <div class="date"></div>
                     </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="title">
-        Card Text Alignment
-    </div>
-    <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-end mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="title">
-        Card Navigation
-    </div>
-    <div class="content-wrapper">
-        <div class="row same-height">
-            <div class="col-md-6">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" aria-current="true"
-                                    href="#home">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1"
-                                    aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-body">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel"
-                                aria-labelledby="home-tab">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Go Home</a>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3" data-date-format="dd-mm-yyyy">
+                                    <label for="datepicker" class="form-label">Date Picker Input</label>
+                                    <input class="form-control date" type="text" autocomplete="off">
+                                </div>
                             </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel"
-                                aria-labelledby="profile-tab">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Go Profile</a>
+                            <div class="col-md-6">
+                                <label for="datepicker-icon" class="form-label">Date Picker With Icon</label>
+                                <div class="input-group input-append date"
+                                    data-date-format="dd-mm-yyyy">
+                                    <input class="form-control" type="text" readonly="" autocomplete="off">
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="far fa-calendar-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="start_date" class="form-label">Date Picker Range</label>
+                                <div class="input-group mb-3 input-daterange datepicker date" data-date-format="dd-mm-yyyy">
+                                    <input class="form-control" required="" type="text" id="start_date" name="start_date" value="" readonly="">
+                                    <span class="bg-primary text-light px-3 justify-content-center align-items-center d-flex">to</span>
+                                    <input class="form-control" required="" type="text" id="end_date" name="end_date" value="" readonly="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <ul class="nav nav-pills card-header-pills">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" aria-current="true"
-                                    href="#home-pills">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#profile-pills">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1"
-                                    aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-body">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home-pills" role="tabpanel"
-                                aria-labelledby="home-tab">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Go Home</a>
-                            </div>
-                            <div class="tab-pane fade" id="profile-pills" role="tabpanel"
-                                aria-labelledby="profile-tab">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to
-                                    additional content.</p>
-                                <a href="#" class="btn btn-primary">Go Profile</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="title">
-        Card Background & Color
-    </div>
-    <div class="content-wrapper">
-        <div class="row same-height">
-            <div class="col-md-3">
-                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content-wrapper">
-        <div class="row same-height">
-            <div class="col-md-3">
-                <div class="card text-primary border-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-secondary border-secondary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-success border-success mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-warning border-warning mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-info border-info mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-danger border-danger mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
                     </div>
                 </div>
             </div>
@@ -675,7 +420,18 @@
     <script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
 
     <!-- js for this page only -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $('.date').datepicker({
+        autoclose: true,
+        todayHighlight: true,
+        format: 'dd-mm-yyyy'
+    }).on('changeDate', function (e) {
+        console.log(e.target.value);
+    });
 
+</script>
     <!-- ======= -->
     <script src="../assets/js/main.js"></script>
     <script>

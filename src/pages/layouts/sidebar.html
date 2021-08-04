@@ -23,15 +23,6 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="main-menu has-dropdown">
-                            <i class="ti-bar-chart"></i>
-                            <span>Charts</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="#" class="link"><span>Detail</span></a></li>
-                        </ul>
-                    </li>
                     <li{{ ' class="active open"'|is_active('^element-(.*)', page)|safe }}>
                         <a href="#" class="main-menu has-dropdown">
                             <i class="ti-desktop"></i>
@@ -56,6 +47,9 @@
                         <ul class="sub-menu {{ 'expand'|is_active('^form-(.*)', page)|safe }}">
                             <li{{ ' class="active"'|is_active('^form-element.html', page)|safe }}><a href="form-element.html" class="link">
                                     <span>Form Element</span></a>
+                            </li>
+                            <li{{ ' class="active"'|is_active('^form-datepicker.html', page)|safe }}><a href="form-datepicker.html" class="link">
+                                    <span>Datepicker</span></a>
                             </li>
                             <li{{ ' class="active"'|is_active('^form-select2.html', page)|safe }}><a href="form-select2.html" class="link">
                                     <span>Select2</span></a>
@@ -102,16 +96,11 @@
                             <li{{ ' class="active"'|is_active('^table-datatables.html', page)|safe }}><a href="table-datatables.html" class="link"><span>DataTables</span></a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#" class="main-menu has-dropdown">
-                            <i class="ti-crown"></i>
-                            <span>Component</span>
+                    <li{{ ' class="active"'|is_active('^charts.html', page)|safe }}>
+                        <a href="charts.html" class="link">
+                            <i class="ti-home"></i>
+                            <span>Charts</span>
                         </a>
-                        <ul class="sub-menu">
-                            <li><a href="#" class="link">Sub Menu</a></li>
-                            <li><a href="#" class="link">Sub Menu</a></li>
-                            <li><a href="#" class="link">Sub Menu</a></li>
-                        </ul>
                     </li>
                 </ul>
             </div>

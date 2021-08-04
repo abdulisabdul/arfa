@@ -1,0 +1,71 @@
+{% set title = 'Form Datepicker' %}
+{% set page = 'form-datepicker.html' %}
+{% extends "layouts/main.html" %}
+
+{% block css%}
+<link rel="stylesheet" href="../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+{% endblock %}
+{% block content %}
+<div class="main-content">
+    <div class="title">
+        Form Element
+    </div>
+    <div class="content-wrapper">
+        <div class="card">
+            <div class="card-header">
+                <h4>Default Form</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="datepicker-icon" class="form-label">Date Picker Inline</label>
+                        <div class="date"></div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3" data-date-format="dd-mm-yyyy">
+                                    <label for="datepicker" class="form-label">Date Picker Input</label>
+                                    <input class="form-control date" type="text" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="datepicker-icon" class="form-label">Date Picker With Icon</label>
+                                <div class="input-group input-append date"
+                                    data-date-format="dd-mm-yyyy">
+                                    <input class="form-control" type="text" readonly="" autocomplete="off">
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="far fa-calendar-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="start_date" class="form-label">Date Picker Range</label>
+                                <div class="input-group mb-3 input-daterange datepicker date" data-date-format="dd-mm-yyyy">
+                                    <input class="form-control" required="" type="text" id="start_date" name="start_date" value="" readonly="">
+                                    <span class="bg-primary text-light px-3 justify-content-center align-items-center d-flex">to</span>
+                                    <input class="form-control" required="" type="text" id="end_date" name="end_date" value="" readonly="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $('.date').datepicker({
+        autoclose: true,
+        todayHighlight: true,
+        format: 'dd-mm-yyyy'
+    }).on('changeDate', function (e) {
+        console.log(e.target.value);
+    });
+
+</script>
+{% endblock %}
