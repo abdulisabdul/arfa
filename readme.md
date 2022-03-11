@@ -12,9 +12,9 @@ as already mentioned by bootstrap 5, that no longer needed jquery, the core of t
 ## Installation & Contributing
 #### Clone Via Git
 ```bash
-git clone https://github.com/abdulisabdul/arka.git
+git clone https://github.com/abdulisabdul/arfa.git
 ```
-- Then Run `cd` to the newly created `/arka` directory
+- Then Run `cd` to the newly created `/arfa` directory
 - Install [yarn](https://yarnpkg.com) or [nodejs](https://nodejs.org/) first if you don't have it in your machine
 - Run the `yarn` or `npm install` command to install dependencies
 - Finally you can Run the ` yarn start-dev` to start development 
