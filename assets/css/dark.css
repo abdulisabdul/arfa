@@ -129,6 +129,9 @@ body.dark .form-select:focus {
   box-shadow: 0 0 3px #027afe;
   border: 1px solid #027afe;
 }
+body.dark .form-control:-moz-read-only, body.dark .form-select:-moz-read-only {
+  color: #b8c2cc;
+}
 body.dark .form-control:read-only, body.dark .form-control:disabled, body.dark .form-control:focus,
 body.dark .form-select:read-only,
 body.dark .form-select:disabled,
@@ -456,3 +459,4 @@ body.dark .nav-tabs .nav-item .nav-link:hover {
 body.dark .tab-pane {
   color: #b8c2cc;
 }
+/*# sourceMappingURL=dark.css.map */

@@ -14,6 +14,7 @@ const sass = require('gulp-dart-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps')
 
 function compileHtml(source, onEnd, log = true) {
   log && _log('[HTML] Compiling: ' + source, 'GREEN');
@@ -21,9 +22,11 @@ function compileHtml(source, onEnd, log = true) {
   src(source)
     .pipe(plumber())
     .pipe(nunjucks.compile({
-        version: '1.0.0',
-        appName: 'Arfka'
-      },
+      version: '1.0.0',
+      appName: 'Arfka',
+      copyright: '2022',
+      author: 'Mulai Dari Null'
+    },
       {
         trimBlocks: true,
         lstripBlocks: true,
@@ -52,6 +55,7 @@ function compileScss(source, onEnd, log = true) {
 
   src(source)
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .on('error', console.error.bind(console))
     .on('end', () => {
@@ -66,11 +70,13 @@ function compileScss(source, onEnd, log = true) {
       autoprefixer(),
       cssnano()
     ]))
+    .pipe(sourcemaps.write('./'))
     .pipe(dest('assets/css'))
     .pipe(plumber.stop());
 
   src(source)
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .on('error', console.error.bind(console))
     .on('end', () => {
@@ -81,6 +87,10 @@ function compileScss(source, onEnd, log = true) {
       dirname: '',
       extname: '.css'
     }))
+    .pipe(postcss([
+      autoprefixer(),
+    ]))
+    .pipe(sourcemaps.write('./'))
     .pipe(dest('assets/css'))
     .pipe(plumber.stop());
 }

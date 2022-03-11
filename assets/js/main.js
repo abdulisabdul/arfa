@@ -20,14 +20,14 @@ const Main = function () {
 
     function shake() {
         let count = 0
-        const int = setInterval(function(){
+        const int = setInterval(function () {
             document.querySelector('.notification .badge').classList.toggle('shake')
             count++
             if (count >= 10) {
                 clearInterval(int)
             }
         }, 4000)
-        
+
     }
 
     // settings handler
@@ -36,7 +36,7 @@ const Main = function () {
             this.parentElement.parentElement.classList.toggle('show')
         })
 
-        window.innerWidth < 900 && $body.classList.add('collapse-sidebar')
+        maxWidth < 900 && $body.classList.add('collapse-sidebar')
 
         // fix handler
         const header = document.querySelector('.header-navbar')
@@ -50,13 +50,13 @@ const Main = function () {
             setting.checked = currTheme?.[`fix${setting.name}`]
             if (setting.name === 'Header') {
                 currTheme?.[`fix${setting.name}`] ? header.classList.add('fixed') : header.classList.remove('fixed')
-            } else if(setting.name === 'Footer'){
+            } else if (setting.name === 'Footer') {
                 currTheme?.[`fix${setting.name}`] ? footer.classList.add('sticky') : footer.classList.remove('sticky')
             } else {
                 if (currTheme?.[`fix${setting.name}`]) {
                     $body.classList.add('collapse-sidebar')
                 } else {
-                    window.innerWidth > 900 && $body.classList.remove('collapse-sidebar')
+                    maxWidth > 900 && $body.classList.remove('collapse-sidebar')
                 }
             }
 
@@ -67,7 +67,7 @@ const Main = function () {
 
                 if (target === 'Header') {
                     this.checked ? header.classList.add('fixed') : header.classList.remove('fixed')
-                } else if(target === 'Footer') {
+                } else if (target === 'Footer') {
                     this.checked ? footer.classList.add('sticky') : footer.classList.remove('sticky')
                 } else {
                     if (this.checked) {
@@ -111,21 +111,21 @@ const Main = function () {
                 $body.classList.remove('dark')
             }
         })
-        
+
         document.querySelectorAll('.theme-color').forEach(function (e) {
             //inital theme settings
             const currTheme = JSON.parse(localStorage.getItem('themeSettings'))
             if (currTheme?.themeColor == e.value) {
                 e.checked = true
             }
-            if(currTheme?.themeColor == 'dark') {
+            if (currTheme?.themeColor == 'dark') {
                 $body.classList.add('dark')
                 // themeColor.href = '../assets/css/dark.css'
-            }else {
+            } else {
                 $body.classList.remove('dark')
                 // themeColor.href=''
             }
-            
+
             //theme changed handle
             e.addEventListener('change', function (theme) {
                 const currTheme = JSON.parse(localStorage.getItem('themeSettings'))
@@ -148,25 +148,25 @@ const Main = function () {
     }
 
     //resize screen handler
-    window.innerWidth < 900 ? document.body.classList.add('collapse-sidebar') :
-        document.body.classList.remove('collapse-sidebar')
+    maxWidth < 900 ? $body.classList.add('collapse-sidebar') :
+        $body.classList.remove('collapse-sidebar')
 
     function resizeHandler() {
         window.onresize = function () {
-            window.innerWidth < 900 ? document.body.classList.add('collapse-sidebar') :
-                document.body.classList.remove('collapse-sidebar')
+            maxWidth < 900 ? $body.classList.add('collapse-sidebar') :
+                $body.classList.remove('collapse-sidebar')
         }
     }
 
     const resetHeightNav = function (type = 'max') {
-            const allSub = document.querySelectorAll('nav .sub-menu.expand')
-            allSub.forEach(s => {
-                s.style.maxHeight = type == 'max' ? s.scrollHeight + "px" : 0
-            })
-        }
+        const allSub = document.querySelectorAll('nav .sub-menu.expand')
+        allSub.forEach(s => {
+            s.style.maxHeight = type == 'max' ? s.scrollHeight + "px" : 0
+        })
+    }
 
+    // ===================== Navbar click handler =====================
     function navbarHandler() {
-        // ===================== NAVBAR CLICK HANDLER =====================
         const main_menu = document.querySelectorAll('.main-menu')
         main_menu.forEach(function (menu) {
             menu.addEventListener('click', function (e) {
@@ -214,7 +214,7 @@ const Main = function () {
 
                 const subMenu = this.nextElementSibling.children
 
-                // ajax page navigation handler || sub menu link active
+                // page navigation handler || sub menu link active
                 for (let index = 0; index < subMenu.length; index++) {
                     const element = subMenu[index];
 
@@ -251,7 +251,7 @@ const Main = function () {
         })
 
 
-        // =================== COLLAPSE NAVBAR EVENT HANDLER ====================
+        // =================== Collapse navbar event handler ====================
 
         // toggle submenu when hover on collapse
         const mainSidebar = document.querySelector('.main-sidebar')
@@ -300,14 +300,13 @@ const Main = function () {
 
 
 
-const userDropDown = document.querySelector('.user-dropdown')
-userDropDown.addEventListener('click', function (e) {
-    // console.log(12)
-})
+// const userDropDown = document.querySelector('.user-dropdown')
+// userDropDown.addEventListener('click', function (e) {
+
+// })
 // const singleLink = document.querySelector('.link')
 // const main_menu = document.querySelectorAll('.main-menu')
 // singleLink.addEventListener('click', function (e) {
-//     console.log(e);
 //     this.classList.add('active')
 //     main_menu.forEach(function (menu) {
 //         console.log(menu.parentElement);
