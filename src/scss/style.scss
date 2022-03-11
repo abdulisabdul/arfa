@@ -1,6 +1,8 @@
 @import "templates/global";
 
-// template
+/**
+***** Template *****
+*/
 @import "templates/sidebar";
 @import "templates/header";
 @import "templates/main-content";
@@ -8,14 +10,18 @@
 @import "templates/settings";
 
 
-// elements
+/**
+***** Elements *****
+*/
 @import "elements/datatables";
 @import "elements/select2";
 @import "elements/timeline";
 @import "elements/chat";
 @import "elements/themify_icons";
 
-// ============== RESPONSIVE ===================
+/**
+***** Responsive *****
+*/
 @media only screen and (max-width: 900px) {
   .collapse-sidebar {
     .main-sidebar {

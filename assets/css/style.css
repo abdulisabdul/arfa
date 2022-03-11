@@ -103,6 +103,9 @@ body {
   width: 90px;
 }
 
+/**
+***** Template *****
+*/
 .main-sidebar {
   z-index: 998;
   display: block;
@@ -583,6 +586,9 @@ body.collapse-sidebar footer {
   margin-bottom: 10px;
 }
 
+/**
+***** Elements *****
+*/
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   padding: 0.2em 0.8em;
   background-color: #f1f1f1;
@@ -606,6 +612,10 @@ body.collapse-sidebar footer {
 
 .dataTables_wrapper .dataTables_filter input {
   outline: none;
+}
+
+.table.dataTable {
+  width: 100% !important;
 }
 
 .dark .dataTables_wrapper .dataTables_paginate .paginate_button {
@@ -1103,6 +1113,9 @@ body.collapse-sidebar footer {
   margin-right: 0.3em;
 }
 
+/**
+***** Responsive *****
+*/
 @media only screen and (max-width: 900px) {
   .collapse-sidebar .main-sidebar {
     margin-left: -270px;

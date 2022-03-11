@@ -96,7 +96,7 @@ async function runCompileScss() {
   return compileScss('src/scss/*.scss', null, true);
 }
 
-function watching() {
+function watchUpdate() {
   runCompileScss();
   runCompileHtml();
 
@@ -130,4 +130,4 @@ function watching() {
 
 exports.html = runCompileHtml;
 exports.sass = runCompileScss;
-exports.default = watching;
+exports.default = watchUpdate;

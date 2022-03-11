@@ -1,14 +1,16 @@
 {
-  "name": "admintemplate",
-  "version": "1.0.0",
-  "description": "admin template",
+  "name": "arfa",
+  "version": "0.0.1",
+  "description": "admin template bootstrap 5",
   "main": "index.js",
   "scripts": {
-    "test": "dev"
+    "start-dev": "gulp"
   },
   "keywords": [
-    "admin",
-    "template"
+    "arfa admin template",
+    "admin template",
+    "dashboard admin",
+    "arfa template"
   ],
   "author": "Muhamad Abdullah",
   "license": "MIT",
