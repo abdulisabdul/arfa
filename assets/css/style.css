@@ -146,11 +146,42 @@ body {
   margin: 20px 20px;
 }
 
+.collapse-sidebar .main-sidebar {
+  width: 80px;
+}
 .collapse-sidebar .main-sidebar:hover .sidebar-content li.active.open > a {
   box-shadow: 0 0 6px 1px #037bfe;
 }
 .collapse-sidebar .main-sidebar .sidebar-content li.active > a {
   box-shadow: none;
+}
+.collapse-sidebar .main-sidebar:hover {
+  width: 260px !important;
+}
+.collapse-sidebar .main-sidebar:hover .sidebar-opener a {
+  right: 20px;
+}
+.collapse-sidebar .main-sidebar:hover li a {
+  width: 230px;
+}
+.collapse-sidebar .main-sidebar:hover li a.has-dropdown:after {
+  display: block;
+}
+.collapse-sidebar .main-sidebar li a {
+  position: relative;
+  width: 40px;
+  overflow: hidden;
+}
+.collapse-sidebar .main-sidebar ul li a.has-dropdown {
+  white-space: nowrap;
+}
+.collapse-sidebar .sidebar-toggle a {
+  display: none;
+  left: 60px;
+}
+.collapse-sidebar .sidebar-header .close-sidebar,
+.collapse-sidebar .main-sidebar li a.has-dropdown:after {
+  display: none;
 }
 
 .sidebar-content {
@@ -158,26 +189,24 @@ body {
 }
 .sidebar-content ul {
   background: #ffffff;
-  /* height: 100%; */
   width: 100%;
   list-style: none;
-}
-.sidebar-content ul > li {
-  line-height: 40px;
 }
 .sidebar-content ul > li a {
   color: #625f6e;
   text-decoration: none;
   font-size: 16px;
-  padding: 2px 0;
+  padding: 10px 0;
   padding-left: 50px;
   font-weight: 500;
   display: block;
   width: 230px;
   position: relative;
-  margin: 5px 15px;
-  overflow: hidden;
-  white-space: nowrap;
+  margin: 2px 15px;
+  transition: 0.35s ease;
+}
+.sidebar-content ul > li a:hover {
+  margin-left: 25px;
 }
 .sidebar-content ul > li a i {
   position: absolute;
@@ -199,13 +228,6 @@ body {
   font-size: 12px;
   transition: all 0.35s ease-in-out;
 }
-.sidebar-content ul > li span {
-  transition: 0.35s ease;
-}
-.sidebar-content ul > li a:hover span,
-.sidebar-content ul > li a:hover i {
-  margin-left: 10px;
-}
 .sidebar-content li.open .sub-menu {
   display: block;
 }
@@ -216,16 +238,21 @@ body {
   border-radius: 5px;
   background: #f6f6f6;
 }
-.sidebar-content li.active > a {
-  color: #ffffff;
-  background: linear-gradient(90deg, #027afe, rgba(70, 137, 238, 0.7));
-  box-shadow: 0 0 6px 1px #037bfe;
-  border-radius: 4px;
-}
 .sidebar-content .sub-menu {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+}
+.sidebar-content .sub-menu li a::before {
+  content: "";
+  background: #82868b;
+  box-shadow: 0 0 6px #82868b;
+  height: 8px;
+  width: 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: calc(50% - 4px);
+  left: 20px;
 }
 .sidebar-content li.active .sub-menu li.active a {
   color: #1e273d !important;
@@ -233,20 +260,17 @@ body {
   background: #f6f6f6;
   box-shadow: none;
   border-radius: 4px;
-  height: 40px;
-  padding: 0 50px;
   z-index: 1;
 }
 .sidebar-content li.active .sub-menu li.active a::before {
-  content: "";
   background: #027afe;
   box-shadow: 0 0 6px #027afe;
-  height: 8px;
-  width: 8px;
-  border-radius: 5px;
-  position: absolute;
-  top: calc(50% - 4px);
-  left: 10px;
+}
+.sidebar-content li.active > a {
+  color: #ffffff;
+  background: linear-gradient(90deg, #027afe, rgba(70, 137, 238, 0.7));
+  box-shadow: 0 0 6px 1px #037bfe;
+  border-radius: 4px;
 }
 
 .sidebar-toggle a {
@@ -301,37 +325,6 @@ body {
   top: 35px;
   color: #191f30;
   transition: all 0.7s ease;
-}
-
-.collapse-sidebar .main-sidebar {
-  width: 80px;
-}
-.collapse-sidebar .main-sidebar:hover {
-  width: 260px !important;
-}
-.collapse-sidebar .main-sidebar:hover .sidebar-opener a {
-  right: 20px;
-}
-.collapse-sidebar .main-sidebar:hover li a {
-  width: 230px;
-}
-.collapse-sidebar .main-sidebar:hover li a.has-dropdown:after {
-  display: block;
-}
-.collapse-sidebar .main-sidebar li a {
-  position: relative;
-  width: 40px;
-}
-.collapse-sidebar .main-sidebar ul li a > span {
-  white-space: nowrap;
-}
-.collapse-sidebar .sidebar-toggle a {
-  display: none;
-  left: 60px;
-}
-.collapse-sidebar .sidebar-header .close-sidebar,
-.collapse-sidebar .main-sidebar li a.has-dropdown:after {
-  display: none;
 }
 
 .shadow-header {

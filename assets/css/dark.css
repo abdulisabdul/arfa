@@ -39,7 +39,7 @@ body.dark .main-sidebar .sidebar-content ul .sub-menu li.active a::before {
   border-radius: 5px;
   position: absolute;
   top: calc(50% - 4px);
-  left: 10px;
+  left: 20px;
 }
 body.dark .main-sidebar .sidebar-content li.active > a {
   background-color: linear-gradient(90deg, var(--primary), rgba(70, 137, 238, 0.7));
