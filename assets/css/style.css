@@ -205,9 +205,6 @@ body {
   margin: 2px 15px;
   transition: 0.35s ease;
 }
-.sidebar-content ul > li a:hover {
-  margin-left: 25px;
-}
 .sidebar-content ul > li a i {
   position: absolute;
   left: 15px;
@@ -227,6 +224,9 @@ body {
   transform: translateY(-50%) rotate(0deg);
   font-size: 12px;
   transition: all 0.35s ease-in-out;
+}
+.sidebar-content ul li:not(.active) a:hover {
+  margin-left: 25px;
 }
 .sidebar-content li.open .sub-menu {
   display: block;
