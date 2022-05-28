@@ -5,9 +5,16 @@ as already mentioned by bootstrap 5, that no longer needed jquery, the core of t
 
 **ArFa** also support dark mode theme
 
-
 !["Preview"](preview.png "ArFa Preview")
 !["Preview"](preview-dark.png "ArFa Preview")
+
+<p align="center">
+	<a href="https://abdulisabdul.github.io/arfa/pages/">&mdash; Demo Page &mdash;</a>
+</p>
+
+## Instant use
+- Go directly download this master repository
+- Go to pages directory, and you ready to go
 
 ## Installation & Contributing
 #### Clone Via Git
@@ -22,11 +29,8 @@ git clone https://github.com/abdulisabdul/arfa.git
 - Once you edit and save changed file, it will recompile to the pages on root folder
 - It's using gulp and nunjucks, please see `gulpfile.js` 
 
-
 ## License
-
-**ArFa** is an open source project that is licensed under [MIT](https://opensource.org/licenses/MIT).
+**ArFa** is an open source project that is licensed under [MIT](https://github.com/abdulisabdul/arfa/blob/master/LICENSE).
 
 ## Image Credits
-
 - [Iconfinder](https://www.iconfinder.com/)
