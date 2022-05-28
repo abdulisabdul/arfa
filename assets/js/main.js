@@ -262,8 +262,8 @@ const Main = function () {
 
                 resetHeightNav()
             }
-
         })
+
         mainSidebar.addEventListener('mouseleave', function (e) {
             if (document.querySelector('body').classList.contains('collapse-sidebar')) {
                 document.querySelectorAll('nav .sub-menu').forEach(c => {
@@ -277,7 +277,6 @@ const Main = function () {
         document.querySelectorAll('.action-toggle').forEach(elem => {
             elem.addEventListener('click', function (e) {
                 e.preventDefault()
-
                 // resetHeightNav('min')
                 if (document.querySelector('body').classList.contains('collapse-sidebar')) {
                     resetHeightNav()
@@ -295,37 +294,9 @@ const Main = function () {
         init: function () {
             perferctSb()
             themeHandler()
-            resizeHandler()
+            // resizeHandler()
             navbarHandler()
             shake()
         }
     }
 }()
-
-
-
-// const userDropDown = document.querySelector('.user-dropdown')
-// userDropDown.addEventListener('click', function (e) {
-
-// })
-// const singleLink = document.querySelector('.link')
-// const main_menu = document.querySelectorAll('.main-menu')
-// singleLink.addEventListener('click', function (e) {
-//     this.classList.add('active')
-//     main_menu.forEach(function (menu) {
-//         console.log(menu.parentElement);
-//         menu.parentElement.classList.remove('open', 'active')
-//         const activeMain = menu.parentElement.classList.contains('open')
-//         const allSub = document.querySelectorAll('nav .sub-menu')
-//         allSub.forEach(function (e) {
-//             if (!activeMain) {
-//                 e.style.maxHeight = null
-//             }
-//         })
-//     })
-
-//     const liActive = document.querySelectorAll('nav ul ul li.active')
-//     liActive.forEach(element => {
-//         element.classList.remove('active')
-//     });
-// })
