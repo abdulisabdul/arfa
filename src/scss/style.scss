@@ -22,6 +22,16 @@
 /**
 ***** Responsive *****
 */
+@media only screen and (max-width: 500px) {
+  .main-sidebar{
+    margin-left: -270px;
+  }
+
+  body.expand-sidebar .main-sidebar{
+    margin-left: unset;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .collapse-sidebar {
     .main-sidebar {

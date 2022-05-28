@@ -281,8 +281,12 @@ const Main = function () {
                 // resetHeightNav('min')
                 if (document.querySelector('body').classList.contains('collapse-sidebar')) {
                     resetHeightNav()
+                    document.querySelector('body').classList.add('expand-sidebar')
+                    document.querySelector('body').classList.remove('collapse-sidebar')
+                } else {
+                    document.querySelector('body').classList.remove('expand-sidebar')
+                    document.querySelector('body').classList.add('collapse-sidebar')
                 }
-                document.querySelector('body').classList.toggle('collapse-sidebar')
             })
         })
     }
