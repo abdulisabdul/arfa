@@ -23,7 +23,7 @@ function compileHtml(source, onEnd, log = true) {
     .pipe(plumber())
     .pipe(nunjucks.compile({
       version: '1.0.0',
-      appName: 'Arfka',
+      appName: 'Arfa',
       copyright: '2022',
       author: 'Mulai Dari Null'
     },
