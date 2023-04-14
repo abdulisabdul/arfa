@@ -4,6 +4,8 @@
 
 {% block css%}
 <link href="../vendor/select2/dist/css/select2.min.css" rel="stylesheet" />
+<link href="../vendor/select2-bootstrap-5-theme/dist/select2-bootstrap-5-theme.min.css" rel="stylesheet" />
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" /> -->
 {% endblock %}
 {% block content %}
 <div class="main-content">
@@ -93,12 +95,14 @@
 {% block js %}
 <script src="../vendor/jquery/dist/jquery.min.js"></script>
 <script src="../vendor/select2/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
 {% endblock %}
 {% block runjs %}
 <script>
     $(document).ready(function () {
         $('.js-example-basic-single').select2({
-            placeholder: 'Select an option'
+            placeholder: 'Select an option',
+            theme: 'bootstrap-5'
         });
     });
 </script>
