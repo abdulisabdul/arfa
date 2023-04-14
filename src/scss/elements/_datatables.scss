@@ -1,81 +1,81 @@
-.dataTables_wrapper .dataTables_paginate {
-  .paginate_button {
-    padding: 0.2em 0.8em;
-    background-color: $gray-light;
-    border-radius: 0.6em;
-    &:hover {
-      background: darken(map-get($map: $theme-colors, $key: "primary"), 15);
-      border: 1px solid
-        darken(map-get($map: $theme-colors, $key: "primary"), 15);
-      color: $white !important;
-    }
-  }
-  .paginate_button.current {
-    background: map-get($map: $theme-colors, $key: "primary");
-    border: 1px solid map-get($map: $theme-colors, $key: "primary");
-    color: $white !important;
-    &:hover {
-      background: lighten(map-get($map: $theme-colors, $key: "primary"), 10);
-      border: 1px solid
-        lighten(map-get($map: $theme-colors, $key: "primary"), 10);
-      color: $white !important;
-    }
-  }
-}
-.dataTables_wrapper .dataTables_filter input{
-  outline: none;
-}
+// .dataTables_wrapper .dataTables_paginate {
+//   .paginate_button {
+//     padding: 0.2em 0.8em;
+//     background-color: $gray-light;
+//     border-radius: 0.6em;
+//     &:hover {
+//       background: darken(map-get($map: $theme-colors, $key: "primary"), 15);
+//       border: 1px solid
+//         darken(map-get($map: $theme-colors, $key: "primary"), 15);
+//       color: $white !important;
+//     }
+//   }
+//   .paginate_button.current {
+//     background: map-get($map: $theme-colors, $key: "primary");
+//     border: 1px solid map-get($map: $theme-colors, $key: "primary");
+//     color: $white !important;
+//     &:hover {
+//       background: lighten(map-get($map: $theme-colors, $key: "primary"), 10);
+//       border: 1px solid
+//         lighten(map-get($map: $theme-colors, $key: "primary"), 10);
+//       color: $white !important;
+//     }
+//   }
+// }
+// .dataTables_wrapper .dataTables_filter input{
+//   outline: none;
+// }
 
-.table.dataTable{
-  width: 100% !important;
-}
+// .table.dataTable{
+//   width: 100% !important;
+// }
 
-.dark {
-  .dataTables_wrapper .dataTables_paginate {
-    .paginate_button {
-      background: $dark-lighter;
-      color: $gray !important;
-      &:hover {
-        color: $white !important;
-      }
-    }
-    .paginate_button.current {
-      background: map-get($map: $theme-colors, $key: "primary");
-      border: 1px solid map-get($map: $theme-colors, $key: "primary");
-      &:hover {
-        color: $white !important;
-      }
-    }
-  }
-  table.dataTable tbody tr,
-  table.dataTable.display tbody tr.even > .sorting_1,
-  table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
-    background-color: $dark-secondary;
-    &:hover {
-      background-color: $dark-lighter !important;
-    }
-  }
-  table.dataTable.stripe tbody tr.odd,
-  table.dataTable.display tbody tr.odd,
-  table.dataTable.display tbody tr.odd > .sorting_1,
-  table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
-    background-color: $dark-lighter;
-  }
+// .dark {
+//   .dataTables_wrapper .dataTables_paginate {
+//     .paginate_button {
+//       background: $dark-lighter;
+//       color: $gray !important;
+//       &:hover {
+//         color: $white !important;
+//       }
+//     }
+//     .paginate_button.current {
+//       background: map-get($map: $theme-colors, $key: "primary");
+//       border: 1px solid map-get($map: $theme-colors, $key: "primary");
+//       &:hover {
+//         color: $white !important;
+//       }
+//     }
+//   }
+//   table.dataTable tbody tr,
+//   table.dataTable.display tbody tr.even > .sorting_1,
+//   table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+//     background-color: $dark-secondary;
+//     &:hover {
+//       background-color: $dark-lighter !important;
+//     }
+//   }
+//   table.dataTable.stripe tbody tr.odd,
+//   table.dataTable.display tbody tr.odd,
+//   table.dataTable.display tbody tr.odd > .sorting_1,
+//   table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+//     background-color: $dark-lighter;
+//   }
 
-  table.dataTable.row-border tbody th,
-  table.dataTable.row-border tbody td,
-  table.dataTable.display tbody th,
-  table.dataTable.display tbody td {
-    border-top: 0px;
-  }
-  .dataTables_wrapper .dataTables_length,
-  .dataTables_wrapper .dataTables_filter,
-  .dataTables_wrapper .dataTables_info,
-  .dataTables_wrapper .dataTables_processing,
-  .dataTables_wrapper .dataTables_paginate,
-  .dataTables_wrapper .dataTables_filter input,
-  .dataTables_wrapper .dataTables_length select {
-    color: $gray;
-    outline: none;
-  }
-}
+//   table.dataTable.row-border tbody th,
+//   table.dataTable.row-border tbody td,
+//   table.dataTable.display tbody th,
+//   table.dataTable.display tbody td {
+//     border-top: 0px;
+//   }
+//   .dataTables_wrapper .dataTables_length,
+//   .dataTables_wrapper .dataTables_filter,
+//   .dataTables_wrapper .dataTables_info,
+//   .dataTables_wrapper .dataTables_processing,
+//   .dataTables_wrapper .dataTables_paginate,
+//   .dataTables_wrapper .dataTables_filter input,
+//   .dataTables_wrapper .dataTables_length select {
+//     color: $gray;
+//     outline: none;
+//   }
+// }
