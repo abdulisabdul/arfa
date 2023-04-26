@@ -617,6 +617,10 @@ body.collapse-sidebar footer {
 /**
 ***** Elements *****
 */
+table.dataTable {
+  width: 100% !important;
+}
+
 .select2-container--bootstrap-5.select2-container--focus .select2-selection, .select2-container--bootstrap-5.select2-container--open .select2-selection,
 .select2-container--bootstrap-5 .select2-dropdown .select2-search .select2-search__field:focus,
 .select2-container--bootstrap-5 .select2-dropdown {
