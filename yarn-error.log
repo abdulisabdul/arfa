@@ -1,60 +1,61 @@
 Arguments: 
-  /usr/local/Cellar/node/14.4.0/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js add bootstarp-datepicker
+  C:\Program Files\nodejs\node.exe C:\Users\Muhamad Abdullah\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
 
 PATH: 
-  /Users/muhamadabdullah/.npm-packages/bin:/Users/muhamadabdullah/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/muhamadabdullah/.npm-packages/bin:/Users/muhamadabdullah/.composer/vendor/bin:/Users/muhamadabdullah/Library/Android/sdk/tools:/Users/muhamadabdullah/Library/Android/sdk/platform-tools:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/MAMP/Library/bin/mysql:/Users/muhamadabdullah/Library/Android/sdk/tools:/Users/muhamadabdullah/Library/Android/sdk/platform-tools:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/MAMP/Library/bin/mysql
+  C:\Users\Muhamad Abdullah\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Muhamad Abdullah\bin;C:\Python310\Scripts;C:\Python310;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn;C:\Program Files\Microsoft SQL Server\120\Tools\Binn;C:\Program Files\Microsoft SQL Server\120\DTS\Binn;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn;C:\Program Files\Git\cmd;C:\laragon\bin\php\php-7.4.19-Win32-vc15-x64;C:\laragon\bin\php\php-7.3.13-Win32-VC15-x64;C:\laragon\bin\php\php-8.1.3-Win32-vs16-x64;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\PuTTY;C:\ProgramData\chocolatey\bin;C:\Android\sdk\platform-tools;C:\Program Files\OpenJDK\openjdk-11.0.13_8\bin;C:\Program Files\nodejs;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\laragon\bin;C:\laragon\bin\apache\httpd-2.4.47-win64-VS16\bin;C:\laragon\bin\composer;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin\git\usr\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.33-winx64\bin;C:\laragon\bin\nginx\nginx-1.19.10;C:\laragon\bin\ngrok;C:\laragon\bin\nodejs\node-v14;C:\laragon\bin\notepad++;C:\laragon\bin\php\php-7.4.19-Win32-vc15-x64;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\telnet;C:\laragon\usr\bin;C:\Users\Muhamad Abdullah\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\Muhamad Abdullah\AppData\Roaming\Composer\vendor\bin;C:\Users\Muhamad Abdullah\AppData\Roaming\npm;C:\xampp\mysql\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
-  1.22.4
+  1.22.17
 
 Node version: 
-  14.4.0
+  16.14.0
 
 Platform: 
-  darwin x64
+  win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/bootstarp-datepicker: Not found
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:66987:18)
-      at Request.self.callback (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:140748:22)
-      at Request.emit (events.js:315:20)
-      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141720:10)
-      at Request.emit (events.js:315:20)
-      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141642:12)
-      at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (_stream_readable.js:1224:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+  SyntaxError: D:\project\arfa\package.json: Unexpected token } in JSON at position 1442
+      at JSON.parse (<anonymous>)
+      at C:\Users\Muhamad Abdullah\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Muhamad Abdullah\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\Muhamad Abdullah\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
-    "name": "admintemplate",
-    "version": "1.0.0",
-    "description": "admin template",
+    "name": "arfa",
+    "version": "0.0.1",
+    "description": "free bootstrap 5 admin template",
     "main": "index.js",
     "scripts": {
-      "test": "dev"
+      "start-dev": "gulp"
     },
     "keywords": [
-      "admin",
-      "template"
+      "arfa admin template",
+      "free bootstrap 5 admin template",
+      "dashboard admin template",
+      "arfa template",
+      "responsive admin template bootstarp 5"
     ],
     "author": "Muhamad Abdullah",
     "license": "MIT",
     "dependencies": {
       "@popperjs/core": "^2.9.2",
-      "bootstrap": "^5.0.1",
+      "bootstrap": "^5.2.3",
+      "bootstrap-datepicker": "^1.9.0",
       "chart.js": "2.9.4",
       "datatables.net": "^1.10.24",
+      "datatables.net-bs5": "^1.13.4",
       "datatables.net-dt": "^1.10.24",
       "datatables.net-fixedheader": "^3.1.8",
+      "datatables.net-responsive-bs5": "^2.4.1",
       "datatables.net-responsive-dt": "^2.2.7",
-      "gijgo": "^1.9.13",
       "izitoast": "^1.4.0",
       "jquery": "3.5.1",
       "jquery-validation": "^1.19.3",
       "perfect-scrollbar": "^1.5.0",
       "select2": "^4.1.0-rc.0",
+      "select2-bootstrap-5-theme": "^1.3.0",
       "sweetalert2": "^10.16.3"
     },
     "devDependencies": {
@@ -68,8 +69,10 @@ npm manifest:
       "gulp-plumber": "^1.2.1",
       "gulp-postcss": "^9.0.0",
       "gulp-rename": "^2.0.0",
+      "gulp-sourcemaps": "^3.0.0",
       "gulp-uglify": "^3.0.2",
-      "postcss": "^8.3.0"
+      "postcss": "^8.3.0",
+      "gulp-concat": "^2.6.1",
     }
   }
 
@@ -101,6 +104,25 @@ Lockfile:
       "@babel/helper-validator-identifier" "^7.14.0"
       chalk "^2.0.0"
       js-tokens "^4.0.0"
+  
+  "@gulp-sourcemaps/identity-map@^2.0.1":
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-2.0.1.tgz#a6e8b1abec8f790ec6be2b8c500e6e68037c0019"
+    integrity sha512-Tb+nSISZku+eQ4X1lAkevcQa+jknn/OVUgZ3XCxEKIsLsqYuPoJwJOPQeaOk75X3WPftb29GWY1eqE7GLsXb1Q==
+    dependencies:
+      acorn "^6.4.1"
+      normalize-path "^3.0.0"
+      postcss "^7.0.16"
+      source-map "^0.6.0"
+      through2 "^3.0.1"
+  
+  "@gulp-sourcemaps/map-sources@^1.0.0":
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/map-sources/-/map-sources-1.0.0.tgz#890ae7c5d8c877f6d384860215ace9d7ec945bda"
+    integrity sha1-iQrnxdjId/bThIYCFazp1+yUW9o=
+    dependencies:
+      normalize-path "^2.0.1"
+      through2 "^2.0.3"
   
   "@popperjs/core@^2.9.2":
     version "2.9.2"
@@ -134,6 +156,11 @@ Lockfile:
     dependencies:
       mime-types "~2.1.24"
       negotiator "0.6.2"
+  
+  acorn@^6.4.1:
+    version "6.4.2"
+    resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.2.tgz#35866fd710528e92de10cf06016498e47e39e1e6"
+    integrity sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==
   
   after@0.8.2:
     version "0.8.2"
@@ -484,10 +511,17 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
     integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
   
-  bootstrap@^5.0.1:
-    version "5.0.1"
-    resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.1.tgz#e7939d599119dc818a90478a2a299bdaff037e09"
-    integrity sha512-Fl79+wsLOZKoiU345KeEaWD0ik8WKRI5zm0YSPj2oF1Qr+BO7z0fco6GbUtqjoG1h4VI89PeKJnMsMMVQdKKTw==
+  bootstrap-datepicker@^1.9.0:
+    version "1.9.0"
+    resolved "https://registry.yarnpkg.com/bootstrap-datepicker/-/bootstrap-datepicker-1.9.0.tgz#e4bfce3fcce1967876b21dc6833ec5994aaed090"
+    integrity sha512-9rYYbaVOheGYxjOr/+bJCmRPihfy+LkLSg4fIFMT9Od8WwWB/MB50w0JO1eBgKUMbb7PFHQD5uAfI3ArAxZRXA==
+    dependencies:
+      jquery ">=1.7.1 <4.0.0"
+  
+  bootstrap@^5.1.3, bootstrap@^5.2.3:
+    version "5.2.3"
+    resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.3.tgz#54739f4414de121b9785c5da3c87b37ff008322b"
+    integrity sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ==
   
   brace-expansion@^1.1.7:
     version "1.1.11"
@@ -958,6 +992,13 @@ Lockfile:
       parseurl "~1.3.2"
       utils-merge "1.0.1"
   
+  convert-source-map@^1.0.0:
+    version "1.8.0"
+    resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.8.0.tgz#f3373c32d21b4d780dd8004514684fb791ca4369"
+    integrity sha512-+OQdjP49zViI/6i7nIJpA8rAl4sV/JdPfU9nZs3VqOwGIgizICvuN2ru6fMd+4llL0tar18UYJXfZ/TWtmhUjA==
+    dependencies:
+      safe-buffer "~5.1.1"
+  
   convert-source-map@^1.5.0:
     version "1.7.0"
     resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.7.0.tgz#17a2cb882d7f77d3490585e2ce6c524424a3a442"
@@ -1050,6 +1091,15 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/css-what/-/css-what-4.0.0.tgz#35e73761cab2eeb3d3661126b23d7aa0e8432233"
     integrity sha512-teijzG7kwYfNVsUh2H/YN62xW3KK9YhXEgSlbxMlcyjPNvdKJqFx5lrwlJgoFP1ZHlB89iGDlo/JyshKeRhv5A==
   
+  css@^3.0.0:
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/css/-/css-3.0.0.tgz#4447a4d58fdd03367c516ca9f64ae365cee4aa5d"
+    integrity sha512-DG9pFfwOrzc+hawpmqX/dHYHJG+Bsdb0klhyi1sDneOgGOXy9wQIC8hzyVp1e4NRYDBdxcylvywPkkXCHAzTyQ==
+    dependencies:
+      inherits "^2.0.4"
+      source-map "^0.6.1"
+      source-map-resolve "^0.6.0"
+  
   cssesc@^3.0.0:
     version "3.0.0"
     resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
@@ -1119,6 +1169,14 @@ Lockfile:
       es5-ext "^0.10.50"
       type "^1.0.1"
   
+  datatables.net-bs5@>=1.12.1, datatables.net-bs5@^1.13.4:
+    version "1.13.4"
+    resolved "https://registry.yarnpkg.com/datatables.net-bs5/-/datatables.net-bs5-1.13.4.tgz#c73058782484cb84d9bc3ae9b8c0f1950b78bf2b"
+    integrity sha512-+gtaiau4vJeuGvnsYWmQy9gqa5XQ15XmkdwpK5EjwYCMzZZEXMQ3wfu2FddBcX5tX9Ual8C+Tf1s2gmqLGNbKQ==
+    dependencies:
+      datatables.net ">=1.12.1"
+      jquery ">=1.7"
+  
   datatables.net-dt@^1.10.15, datatables.net-dt@^1.10.24:
     version "1.10.24"
     resolved "https://registry.yarnpkg.com/datatables.net-dt/-/datatables.net-dt-1.10.24.tgz#64397d6842052afab9dedf9ba160849954fb4cc3"
@@ -1133,6 +1191,15 @@ Lockfile:
     integrity sha512-MLZgzkU6sGNSqlKuuJC/5/ps4xcmJQZILHqr5bOK/2kBEzCZzH+ZVOjudVRshnxkFn7IOTAOecMQHI6HPHFhag==
     dependencies:
       datatables.net "^1.10.15"
+      jquery ">=1.7"
+  
+  datatables.net-responsive-bs5@^2.4.1:
+    version "2.4.1"
+    resolved "https://registry.yarnpkg.com/datatables.net-responsive-bs5/-/datatables.net-responsive-bs5-2.4.1.tgz#8342ea3d97f49b2d4ce3af9742367d2feef31000"
+    integrity sha512-gtW0IjNMWCWQ+KHpIPcgXiQrq2Dhxz8yKql4sS2WfuYz+Z7645mk7xmqEhy4aqpWEGXdv4rcaZhr4tt49NLOpQ==
+    dependencies:
+      datatables.net-bs5 ">=1.12.1"
+      datatables.net-responsive ">=2.3.0"
       jquery ">=1.7"
   
   datatables.net-responsive-dt@^2.2.7:
@@ -1152,6 +1219,14 @@ Lockfile:
       datatables.net "^1.10.15"
       jquery ">=1.7"
   
+  datatables.net-responsive@>=2.3.0:
+    version "2.4.1"
+    resolved "https://registry.yarnpkg.com/datatables.net-responsive/-/datatables.net-responsive-2.4.1.tgz#3396ec812e779424bc9261cc1ce527a57a2d9e42"
+    integrity sha512-6aGZybNb65lRPtd+hPHRyaBgs7D3R2Hw+RQP7he3qH5BTpMH9BG4FxVvyAud0Q4gyopO9I52uf60p2GT++4qOA==
+    dependencies:
+      datatables.net ">=1.12.1"
+      jquery ">=1.7"
+  
   datatables.net@1.10.24, datatables.net@^1.10.15, datatables.net@^1.10.24:
     version "1.10.24"
     resolved "https://registry.yarnpkg.com/datatables.net/-/datatables.net-1.10.24.tgz#370e02f1e201de8334fdc92e7515c1624191573c"
@@ -1159,12 +1234,35 @@ Lockfile:
     dependencies:
       jquery ">=1.7"
   
+  datatables.net@>=1.12.1:
+    version "1.13.4"
+    resolved "https://registry.yarnpkg.com/datatables.net/-/datatables.net-1.13.4.tgz#9a809cee82eca0a884e10b4d47a3a3d6e65e9fe7"
+    integrity sha512-yzhArTOB6tPO2QFKm1z3hA4vabtt2hRvgw8XLsT1xqEirinfGYqWDiWXlkTPTaJv2e7gG+Kf985sXkzBFlGrGQ==
+    dependencies:
+      jquery ">=1.7"
+  
+  debug-fabulous@^1.0.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/debug-fabulous/-/debug-fabulous-1.1.0.tgz#af8a08632465224ef4174a9f06308c3c2a1ebc8e"
+    integrity sha512-GZqvGIgKNlUnHUPQhepnUZFIMoi3dgZKQBzKDeL2g7oJF9SNAji/AAu36dusFUas0O+pae74lNeoIPHqXWDkLg==
+    dependencies:
+      debug "3.X"
+      memoizee "0.4.X"
+      object-assign "4.X"
+  
   debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
     version "2.6.9"
     resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
     integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
     dependencies:
       ms "2.0.0"
+  
+  debug@3.X:
+    version "3.2.7"
+    resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
+    integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
+    dependencies:
+      ms "^2.1.1"
   
   debug@4.3.1:
     version "4.3.1"
@@ -1252,6 +1350,11 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/detect-file/-/detect-file-1.0.0.tgz#f0d66d03672a825cb1b73bdb3fe62310c8e552b7"
     integrity sha1-8NZtA2cqglyxtzvbP+YjEMjlUrc=
+  
+  detect-newline@^2.0.0:
+    version "2.1.0"
+    resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-2.1.0.tgz#f41f1c10be4b00e87b5f13da680759f2c5bfd3e2"
+    integrity sha1-9B8cEL5LAOh7XxPaaAdZ8sW/0+I=
   
   dev-ip@^1.0.1:
     version "1.0.1"
@@ -1413,6 +1516,15 @@ Lockfile:
       es6-symbol "~3.1.3"
       next-tick "~1.0.0"
   
+  es5-ext@^0.10.53, es5-ext@~0.10.14, es5-ext@~0.10.2, es5-ext@~0.10.46:
+    version "0.10.58"
+    resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.58.tgz#5b97d94236285fb87c8ffc782cf42eb0a25d2ae0"
+    integrity sha512-LHO+KBBaHGwjy32ibSaMY+ZzjpC4K4I5bPoijICMBL7gXEXfrEUrzssmNP+KigbQEp1dRUnGkry/vUnxOqptLQ==
+    dependencies:
+      es6-iterator "^2.0.3"
+      es6-symbol "^3.1.3"
+      next-tick "^1.1.0"
+  
   es6-iterator@^2.0.1, es6-iterator@^2.0.3, es6-iterator@~2.0.3:
     version "2.0.3"
     resolved "https://registry.yarnpkg.com/es6-iterator/-/es6-iterator-2.0.3.tgz#a7de889141a05a94b0854403b2d0a0fbfa98f3b7"
@@ -1422,7 +1534,7 @@ Lockfile:
       es5-ext "^0.10.35"
       es6-symbol "^3.1.1"
   
-  es6-symbol@^3.1.1, es6-symbol@~3.1.3:
+  es6-symbol@^3.1.1, es6-symbol@^3.1.3, es6-symbol@~3.1.3:
     version "3.1.3"
     resolved "https://registry.yarnpkg.com/es6-symbol/-/es6-symbol-3.1.3.tgz#bad5d3c1bcdac28269f4cb331e431c78ac705d18"
     integrity sha512-NJ6Yn3FuDinBaBRWl/q5X/s4koRHBrgKAu+yGI6JCBeiu3qrcbJhwT2GeR/EXVfylRk8dpQVJoLEFhK+Mu31NA==
@@ -1430,7 +1542,7 @@ Lockfile:
       d "^1.0.1"
       ext "^1.1.2"
   
-  es6-weak-map@^2.0.1:
+  es6-weak-map@^2.0.1, es6-weak-map@^2.0.3:
     version "2.0.3"
     resolved "https://registry.yarnpkg.com/es6-weak-map/-/es6-weak-map-2.0.3.tgz#b6da1f16cc2cc0d9be43e6bdbfc5e7dfcdf31d53"
     integrity sha512-p5um32HOTO1kP+w7PRnB+5lQ43Z6muuMuIMffvDN8ZB4GcnjLBV6zGStpbASIMk4DCAvEaamhe2zhyCb/QXXsA==
@@ -1464,6 +1576,14 @@ Lockfile:
     version "1.8.1"
     resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
     integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+  
+  event-emitter@^0.3.5:
+    version "0.3.5"
+    resolved "https://registry.yarnpkg.com/event-emitter/-/event-emitter-0.3.5.tgz#df8c69eef1647923c7157b9ce83840610b02cc39"
+    integrity sha1-34xp7vFkeSPHFXuc6DhAYQsCzDk=
+    dependencies:
+      d "1"
+      es5-ext "~0.10.14"
   
   eventemitter3@^4.0.0:
     version "4.0.7"
@@ -1746,13 +1866,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
     integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
   
-  gijgo@^1.9.13:
-    version "1.9.13"
-    resolved "https://registry.yarnpkg.com/gijgo/-/gijgo-1.9.13.tgz#22c6186252369de3a618e1e6369a923849128b6e"
-    integrity sha512-VxUzueysKaSRpjNM6jiMdoTJuUEWiPJNir5PCVKat6uA1R6vH7crKyFnR/Ey1k2r0i1yvYeJ3QKsPFkTB7aZxg==
-    dependencies:
-      jquery "^3.2.1"
-  
   glob-parent@^3.1.0:
     version "3.1.0"
     resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
@@ -1918,6 +2031,23 @@ Lockfile:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-2.0.0.tgz#9bbc3962b0c0f52fc67cd5eaff6c223ec5b9cf6c"
     integrity sha512-97Vba4KBzbYmR5VBs9mWmK+HwIf5mj+/zioxfZhOKeXtx5ZjBk57KFlePf5nxq9QsTtFl0ejnHE3zTC9MHXqyQ==
+  
+  gulp-sourcemaps@^3.0.0:
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/gulp-sourcemaps/-/gulp-sourcemaps-3.0.0.tgz#2e154e1a2efed033c0e48013969e6f30337b2743"
+    integrity sha512-RqvUckJkuYqy4VaIH60RMal4ZtG0IbQ6PXMNkNsshEGJ9cldUPRb/YCgboYae+CLAs1HQNb4ADTKCx65HInquQ==
+    dependencies:
+      "@gulp-sourcemaps/identity-map" "^2.0.1"
+      "@gulp-sourcemaps/map-sources" "^1.0.0"
+      acorn "^6.4.1"
+      convert-source-map "^1.0.0"
+      css "^3.0.0"
+      debug-fabulous "^1.0.0"
+      detect-newline "^2.0.0"
+      graceful-fs "^4.0.0"
+      source-map "^0.6.0"
+      strip-bom-string "^1.0.0"
+      through2 "^2.0.0"
   
   gulp-uglify@^3.0.2:
     version "3.0.2"
@@ -2359,6 +2489,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-5.0.0.tgz#4427f50ab3429e9025ea7d52e9043a9ef4159344"
     integrity sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==
   
+  is-promise@^2.2.2:
+    version "2.2.2"
+    resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.2.2.tgz#39ab959ccbf9a774cf079f7b40c7a26f763135f1"
+    integrity sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==
+  
   is-relative@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/is-relative/-/is-relative-1.0.0.tgz#a1bb6935ce8c5dba1e8b9754b9b2dcc020e2260d"
@@ -2440,7 +2575,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
     integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
   
-  jquery@>=1.7, jquery@^3.2.1:
+  jquery@>=1.7, "jquery@>=1.7.1 <4.0.0":
     version "3.6.0"
     resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
     integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
@@ -2620,6 +2755,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
     integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
   
+  lru-queue@^0.1.0:
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/lru-queue/-/lru-queue-0.1.0.tgz#2738bd9f0d3cf4f84490c5736c48699ac632cda3"
+    integrity sha1-Jzi9nw089PhEkMVzbEhpmsYyzaM=
+    dependencies:
+      es5-ext "~0.10.2"
+  
   make-error-cause@^1.1.1:
     version "1.2.2"
     resolved "https://registry.yarnpkg.com/make-error-cause/-/make-error-cause-1.2.2.tgz#df0388fcd0b37816dff0a5fb8108939777dcbc9d"
@@ -2665,6 +2807,20 @@ Lockfile:
     version "2.0.14"
     resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
     integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
+  
+  memoizee@0.4.X:
+    version "0.4.15"
+    resolved "https://registry.yarnpkg.com/memoizee/-/memoizee-0.4.15.tgz#e6f3d2da863f318d02225391829a6c5956555b72"
+    integrity sha512-UBWmJpLZd5STPm7PMUlOw/TSy972M+z8gcyQ5veOnSDRREz/0bmpyTfKt3/51DhEBqCZQn1udM/5flcSPYhkdQ==
+    dependencies:
+      d "^1.0.1"
+      es5-ext "^0.10.53"
+      es6-weak-map "^2.0.3"
+      event-emitter "^0.3.5"
+      is-promise "^2.2.2"
+      lru-queue "^0.1.0"
+      next-tick "^1.1.0"
+      timers-ext "^0.1.7"
   
   micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4:
     version "3.1.10"
@@ -2787,6 +2943,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
     integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
   
+  next-tick@1, next-tick@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.1.0.tgz#1836ee30ad56d67ef281b22bd199f709449b35eb"
+    integrity sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==
+  
   next-tick@~1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
@@ -2807,7 +2968,7 @@ Lockfile:
       semver "2 || 3 || 4 || 5"
       validate-npm-package-license "^3.0.1"
   
-  normalize-path@^2.1.1:
+  normalize-path@^2.0.1, normalize-path@^2.1.1:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-2.1.1.tgz#1ab28b556e198363a8c1a6f7e6fa20137fe6aed9"
     integrity sha1-GrKLVW4Zg2Oowab35vogE3/mrtk=
@@ -2856,6 +3017,11 @@ Lockfile:
       a-sync-waterfall "^1.0.0"
       asap "^2.0.3"
       commander "^5.1.0"
+  
+  object-assign@4.X:
+    version "4.1.1"
+    resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+    integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
   
   object-copy@^0.1.0:
     version "0.1.0"
@@ -3108,6 +3274,11 @@ Lockfile:
     version "1.5.0"
     resolved "https://registry.yarnpkg.com/perfect-scrollbar/-/perfect-scrollbar-1.5.0.tgz#821d224ed8ff61990c23f26db63048cdc75b6b83"
     integrity sha512-NrNHJn5mUGupSiheBTy6x+6SXCFbLlm8fVZh9moIzw/LgqElN5q4ncR4pbCBCYuCJ8Kcl9mYM0NgDxvW+b4LxA==
+  
+  picocolors@^0.2.1:
+    version "0.2.1"
+    resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-0.2.1.tgz#570670f793646851d1ba135996962abad587859f"
+    integrity sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA==
   
   picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.3:
     version "2.3.0"
@@ -3393,6 +3564,14 @@ Lockfile:
     version "4.1.0"
     resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
     integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
+  
+  postcss@^7.0.16:
+    version "7.0.39"
+    resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.39.tgz#9624375d965630e2e1f2c02a935c82a59cb48309"
+    integrity sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==
+    dependencies:
+      picocolors "^0.2.1"
+      source-map "^0.6.1"
   
   postcss@^8.3.0:
     version "8.3.0"
@@ -3688,6 +3867,13 @@ Lockfile:
     dependencies:
       chokidar ">=3.0.0 <4.0.0"
   
+  select2-bootstrap-5-theme@^1.3.0:
+    version "1.3.0"
+    resolved "https://registry.yarnpkg.com/select2-bootstrap-5-theme/-/select2-bootstrap-5-theme-1.3.0.tgz#b7126b01c4e2cfb5ee683b219820d49da31b4810"
+    integrity sha512-uEJDruP4tmwyKcs3V0oP7CIsyC45PGF5ddo8unwTp8OucJ1PSuTOBr+xbWaHTQPGnvp7N96psVQ5UBMQvFCcHA==
+    dependencies:
+      bootstrap "^5.1.3"
+  
   select2@^4.1.0-rc.0:
     version "4.1.0-rc.0"
     resolved "https://registry.yarnpkg.com/select2/-/select2-4.1.0-rc.0.tgz#ba3cd3901dda0155e1c0219ab41b74ba51ea22d8"
@@ -3875,6 +4061,14 @@ Lockfile:
       source-map-url "^0.4.0"
       urix "^0.1.0"
   
+  source-map-resolve@^0.6.0:
+    version "0.6.0"
+    resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.6.0.tgz#3d9df87e236b53f16d01e58150fc7711138e5ed2"
+    integrity sha512-KXBr9d/fO/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnKC+EwzvJZIP/qkuMgR/w==
+    dependencies:
+      atob "^2.1.2"
+      decode-uri-component "^0.2.0"
+  
   source-map-url@^0.4.0:
     version "0.4.1"
     resolved "https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.4.1.tgz#0af66605a745a5a2f91cf1bbf8a7afbc283dec56"
@@ -3885,7 +4079,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
     integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
   
-  source-map@^0.6.1:
+  source-map@^0.6.0, source-map@^0.6.1:
     version "0.6.1"
     resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
     integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
@@ -4037,6 +4231,11 @@ Lockfile:
     dependencies:
       ansi-regex "^5.0.0"
   
+  strip-bom-string@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/strip-bom-string/-/strip-bom-string-1.0.0.tgz#e5211e9224369fbb81d633a2f00044dc8cedad92"
+    integrity sha1-5SEekiQ2n7uB1jOi8ABE3IztrZI=
+  
   strip-bom@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-2.0.0.tgz#6219a85616520491f35788bdbf1447a99c7e6b0e"
@@ -4138,6 +4337,14 @@ Lockfile:
     version "1.1.0"
     resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
     integrity sha1-dkpaEa9QVhkhsTPztE5hhofg9cM=
+  
+  timers-ext@^0.1.7:
+    version "0.1.7"
+    resolved "https://registry.yarnpkg.com/timers-ext/-/timers-ext-0.1.7.tgz#6f57ad8578e07a3fb9f91d9387d65647555e25c6"
+    integrity sha512-b85NUNzTSdodShTIbky6ZF02e8STtVVfD+fu4aXXShEELpozH+bCpJLYMPZbsABN2wDH7fJpqIoXxJpzbf0NqQ==
+    dependencies:
+      es5-ext "~0.10.46"
+      next-tick "1"
   
   timsort@^0.3.0:
     version "0.3.0"

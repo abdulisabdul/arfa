@@ -8,6 +8,7 @@ const plumber = require('gulp-plumber');
 const nunjucks = require('gulp-nunjucks');
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
 const color = require('gulp-color');
 const nodePath = require('path');
 const sass = require('gulp-dart-sass');
@@ -15,6 +16,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps')
+const npmDist = require('gulp-npm-dist')
 
 function compileHtml(source, onEnd, log = true) {
   log && _log('[HTML] Compiling: ' + source, 'GREEN');
@@ -46,7 +48,7 @@ function compileHtml(source, onEnd, log = true) {
       onEnd && onEnd.call(this);
       log && _log('[HTML] Finished', 'GREEN');
     })
-    .pipe(dest('pages/'))
+    .pipe(dest('dist/pages/'))
     .pipe(plumber.stop());
 }
 
@@ -71,7 +73,7 @@ function compileScss(source, onEnd, log = true) {
       cssnano()
     ]))
     .pipe(sourcemaps.write('./'))
-    .pipe(dest('assets/css'))
+    .pipe(dest('dist/assets/css'))
     .pipe(plumber.stop());
 
   src(source)
@@ -95,6 +97,37 @@ function compileScss(source, onEnd, log = true) {
     .pipe(plumber.stop());
 }
 
+async function compileJs(source) {
+  src('src/js/*.js')
+    .pipe(uglify())
+    .pipe(rename({
+      extname: '.min.js'
+    }))
+    .pipe(dest('./dist/assets/js'))
+
+  src('src/js/pages/*.js')
+    .pipe(uglify())
+    .pipe(rename({
+      extname: '.min.js'
+    }))
+    .pipe(dest('./dist/assets/js/pages'))
+}
+
+async function copyVendor() {
+  _log('Copying vendor to dist/vendor', 'GREEN');
+  src(
+    npmDist({
+      copyUnminified: true,
+      excludes: ['/**/*.txt']
+    }),
+    { base: './node_modules' }
+  )
+  .pipe(rename(function (path) {
+    path.dirname = path.dirname.replace(/\/dist/, '').replace(/\\dist/, '');
+  })).pipe(dest('./dist/vendor'))
+  .end(() => _log('Finish copy vendor', 'GREEN'))
+}
+
 function _log(message, _color) {
   console.log(color(message, _color ? _color : 'WHITE'));
 }
@@ -109,12 +142,13 @@ async function runCompileScss() {
 function watchUpdate() {
   runCompileScss();
   runCompileHtml();
+  compileJs()
 
   browserSync.init({
     server: {
       baseDir: "./"
     },
-    startPath: 'pages/index.html',
+    startPath: 'dist/pages/index.html',
     port: 8080
   });
 
@@ -122,7 +156,7 @@ function watchUpdate() {
     'src/pages/*.html',
     'src/scss/*.scss',
   ]).on('change', (file) => {
-    file = file.replace(/\\/g, nodePath.sep);
+    file = file.replace(/\\/g, '/');
 
     if (file.indexOf('.scss') > -1) {
       compileScss(file, () => {
@@ -141,3 +175,5 @@ function watchUpdate() {
 exports.html = runCompileHtml;
 exports.sass = runCompileScss;
 exports.default = watchUpdate;
+exports.js = compileJs;
+exports.copyVendor = copyVendor;
