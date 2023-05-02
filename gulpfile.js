@@ -118,14 +118,45 @@ async function copyVendor() {
   src(
     npmDist({
       copyUnminified: true,
-      excludes: ['/**/*.txt']
+      replaceDefaultExcludes: true,
+      excludes: [
+        'node_modules/**/*',
+        'node_modules',
+        '/**/*.txt',
+        'src/**/*',
+        'examples/**/*',
+        'example/**/*',
+        'demo/**/*',
+        'spec/**/*',
+        'docs/**/*',
+        'tests/**/*',
+        'test/**/*',
+        'Gruntfile.js',
+        'gulpfile.js',
+        'package.json',
+        'package-lock.json',
+        'bower.json',
+        'composer.json',
+        'yarn.lock',
+        'webpack.config.js',
+        'README',
+        'LICENSE',
+        'CHANGELOG',
+        '*.yml',
+        '*.md',
+        '*.coffee',
+        '*.ts',
+        '*.scss',
+        '*.less',
+      ]
     }),
     { base: './node_modules' }
   )
-  .pipe(rename(function (path) {
-    path.dirname = path.dirname.replace(/\/dist/, '').replace(/\\dist/, '');
-  })).pipe(dest('./dist/vendor'))
-  .end(() => _log('Finish copy vendor', 'GREEN'))
+    .pipe(rename(function (path) {
+      path.dirname = path.dirname.replace(/\/dist/, '').replace(/\\dist/, '');
+    }))
+    .on('end', () => _log('Finish copy vendor', 'GREEN'))
+    .pipe(dest('./dist/vendor'))
 }
 
 function _log(message, _color) {
