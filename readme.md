@@ -9,7 +9,7 @@ as already mentioned by bootstrap 5, that no longer needed jquery, the core of t
 !["Preview"](preview-dark.png "ArFa Preview")
 
 <p align="center">
-	<a href="https://abdulisabdul.github.io/arfa/pages/">&mdash; Demo Page &mdash;</a>
+	<a href="https://abdulisabdul.github.io/arfa/dist/pages/">&mdash; Demo Page &mdash;</a>
 </p>
 
 ## Instant use
