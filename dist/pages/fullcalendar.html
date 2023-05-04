@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blank Page &mdash; Arfa</title>
+    <title>Fullcalendar &mdash; Arfa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
@@ -16,6 +16,11 @@
 
     <!-- CSS for this page only -->
 <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+<style>
+    .fc-event {
+        cursor: move;
+    }
+</style>
     <!-- End CSS  -->
 
     <link rel="stylesheet" href="../assets/css/style.min.css">
@@ -318,6 +323,33 @@
                     <div class="col-md-10">
                         <div id="calendar"></div>
                     </div>
+                    <div class="col-md-2">
+                        <div id='external-events'>
+                            <p>
+                              <strong>Draggable Events</strong>
+                            </p>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 1</div>
+                            </div>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 2</div>
+                            </div>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 3</div>
+                            </div>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 4</div>
+                            </div>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 5</div>
+                            </div>
+                          
+                            <p>
+                              <input type='checkbox' class="form-check-input" id='drop-remove' />
+                              <label for='drop-remove'>remove after drop</label>
+                            </p>
+                          </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -401,14 +433,34 @@
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         const today = new Date()
+
+        var containerEl = document.getElementById('external-events');
+
+        var checkbox = document.getElementById('drop-remove');
+
+        new FullCalendar.Draggable(containerEl, {
+            itemSelector: '.fc-event',
+            eventData: function(eventEl) {
+                return {
+                    title: eventEl.innerText
+                };
+            }
+        });
+
         var calendar = new FullCalendar.Calendar(calendarEl, {
             themeSystem: 'bootstrap5',
             initialView: 'dayGridMonth',
             editable: true,
+            droppable: true,
+            drop: function(info) {
+                if (checkbox.checked) {
+                    info.draggedEl.parentNode.removeChild(info.draggedEl);
+                }
+            },
             headerToolbar: {
                 left: 'prev,next today',
                 center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
             },
             events: [
                 {
@@ -445,6 +497,8 @@
         });
         calendar.render();
         calendar.setOption('locale', 'id');
+
+
       });
 </script>
 </body>

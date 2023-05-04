@@ -1,9 +1,14 @@
-{% set title = 'Blank Page' %}
+{% set title = 'Fullcalendar' %}
 {% set page = 'fullcalendar.html' %}
 {% extends "layouts/main.html" %}
 
 {% block css%}
 <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+<style>
+    .fc-event {
+        cursor: move;
+    }
+</style>
 {% endblock %}
 {% block content %}
         <div class="main-content">
@@ -14,6 +19,33 @@
                 <div class="row">
                     <div class="col-md-10">
                         <div id="calendar"></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div id='external-events'>
+                            <p>
+                              <strong>Draggable Events</strong>
+                            </p>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 1</div>
+                            </div>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 2</div>
+                            </div>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 3</div>
+                            </div>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 4</div>
+                            </div>
+                            <div class='fc-event py-1 mb-1 fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                              <div class='fc-event-main'>My Event 5</div>
+                            </div>
+                          
+                            <p>
+                              <input type='checkbox' class="form-check-input" id='drop-remove' />
+                              <label for='drop-remove'>remove after drop</label>
+                            </p>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -29,14 +61,34 @@
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         const today = new Date()
+
+        var containerEl = document.getElementById('external-events');
+
+        var checkbox = document.getElementById('drop-remove');
+
+        new FullCalendar.Draggable(containerEl, {
+            itemSelector: '.fc-event',
+            eventData: function(eventEl) {
+                return {
+                    title: eventEl.innerText
+                };
+            }
+        });
+
         var calendar = new FullCalendar.Calendar(calendarEl, {
             themeSystem: 'bootstrap5',
             initialView: 'dayGridMonth',
             editable: true,
+            droppable: true,
+            drop: function(info) {
+                if (checkbox.checked) {
+                    info.draggedEl.parentNode.removeChild(info.draggedEl);
+                }
+            },
             headerToolbar: {
                 left: 'prev,next today',
                 center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
             },
             events: [
                 {
@@ -73,6 +125,8 @@
         });
         calendar.render();
         calendar.setOption('locale', 'id');
+
+
       });
 </script>
 {% endblock %}
