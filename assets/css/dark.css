@@ -61,10 +61,13 @@ body.dark .header-navbar .header-content .notification > a > i {
 body.dark .header-navbar .header-content .user-dropdown .label div {
   color: #b8c2cc;
 }
-body.dark .header-navbar .header-left .theme-switch-icon::before {
+body.dark .header-navbar .theme-switch-icon::before {
   content: "";
   font-family: "Font Awesome 5 Free";
   color: #c4a620;
+}
+body.dark .header-navbar .header-left i {
+  color: #b8c2cc;
 }
 body.dark .header-navbar .toggle-mobile {
   box-shadow: none;

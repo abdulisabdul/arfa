@@ -88,11 +88,14 @@ body.dark {
         color: $gray;
       }
     }
+    .theme-switch-icon::before {
+      content: "\f185";
+      font-family: "Font Awesome 5 Free";
+      color: rgb(196, 166, 32);
+    }
     .header-left {
-      .theme-switch-icon::before {
-        content: "\f185";
-        font-family: "Font Awesome 5 Free";
-        color: rgb(196, 166, 32);
+      i { 
+        color: #b8c2cc;
       }
     }
     .toggle-mobile {

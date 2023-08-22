@@ -7,7 +7,7 @@
   position: fixed;
   background-color: $white;
   /* overflow: auto; */
-  transition: all 0.4s ease;
+  transition: width 0.4s ease;
   transition-property: width, margin-left;
   box-shadow: 0.2px 0.2px 5px 0.7px $gray-light;
   .text {
@@ -27,6 +27,18 @@
   align-items: center;
   margin: 20px 20px;
 }
+
+.menu-category {
+  display: block;
+  margin: 15px 25px;
+  span {
+    color: #a3a3a7;
+    font-size: 15px;
+  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .collapse-sidebar {
   .main-sidebar {
     &:hover {
@@ -37,6 +49,15 @@
           }
         }
       }
+      .menu-category {
+        display: block;
+      }
+      .sidebar-content li.open .sub-menu {
+        display: block;
+      }
+    }
+    .sidebar-content li.open .sub-menu {
+      display: none;
     }
     .sidebar-content {
       li.active {
@@ -44,6 +65,10 @@
           box-shadow: none;
         }
       }
+    }
+
+    .menu-category {
+      display: none;
     }
     width: 80px;
     &:hover {
@@ -53,6 +78,9 @@
       }
       li a {
         width: 230px;
+        &::before {
+          display: block;
+        }
       }
       li a.has-dropdown:after {
         display: block;
@@ -62,6 +90,9 @@
       position: relative;
       width: 40px;
       overflow: hidden;
+      &::before {
+        display: none;
+      }
     }
     ul li a.has-dropdown {
       white-space: nowrap;
@@ -96,15 +127,15 @@
         width: 230px;
         position: relative;
         margin: 2px 15px;
-        transition: 0.35s ease;
+        transition: margin 0.35s ease;
         i {
           position: absolute;
           left: 15px;
           top: 50%;
           font-size: 1.15rem;
           line-height: 0px;
-          transition: 0.35s ease;
-          margin-right: 10px;
+          // transition: 0.35s ease;
+          // margin-right: 10px;
         }
         &.has-dropdown:after {
           content: "\e649";
@@ -115,13 +146,18 @@
           right: 15px;
           transform: translateY(-50%) rotate(0deg);
           font-size: 12px;
-          transition: all 0.35s ease-in-out;
+          transition: transform 0.25s ease-in-out;
         }
+      }
+      span {
+        transition: margin .3s ease-out
       }
     }
     li:not(.active) {
       a:hover {
-        margin-left: 25px;
+        span {
+          margin-left: 7px;
+        }
       }
     }
   }

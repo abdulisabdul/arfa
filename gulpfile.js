@@ -18,13 +18,13 @@ const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps')
 const npmDist = require('gulp-npm-dist')
 
-function compileHtml(source, onEnd, log = true) {
+function compileHtml(source = 'src/pages/*.html', onEnd = null, log = true) {
   log && _log('[HTML] Compiling: ' + source, 'GREEN');
 
   src(source)
     .pipe(plumber())
     .pipe(nunjucks.compile({
-      version: '1.0.0',
+      version: '1.1.0',
       appName: 'Arfa',
       copyright: '2022',
       author: 'Mulai Dari Null'
@@ -52,7 +52,7 @@ function compileHtml(source, onEnd, log = true) {
     .pipe(plumber.stop());
 }
 
-function compileScss(source, onEnd, log = true) {
+function compileScss(source = 'src/scss/*.scss', onEnd = null, log = true) {
   log && _log('[SCSS] Compiling scss:' + source, 'GREEN');
 
   src(source)
@@ -62,7 +62,7 @@ function compileScss(source, onEnd, log = true) {
     .on('error', console.error.bind(console))
     .on('end', () => {
       onEnd && onEnd.call(this);
-      log && _log('[SCSS] Finished', 'GREEN');
+      log && _log('[SCSS] Compile Minified Finished', 'GREEN');
     })
     .pipe(rename({
       dirname: '',
@@ -83,7 +83,7 @@ function compileScss(source, onEnd, log = true) {
     .on('error', console.error.bind(console))
     .on('end', () => {
       onEnd && onEnd.call(this);
-      log && _log('[SCSS] Finished', 'GREEN');
+      log && _log('[SCSS] Compile Finished', 'GREEN');
     })
     .pipe(rename({
       dirname: '',
@@ -155,7 +155,7 @@ async function copyVendor() {
     .pipe(rename(function (path) {
       path.dirname = path.dirname.replace(/\/dist/, '').replace(/\\dist/, '');
     }))
-    .on('end', () => _log('Finish copy vendor', 'GREEN'))
+    .on('end', () => _log('Finish Copy Vendor', 'GREEN'))
     .pipe(dest('./dist/vendor'))
 }
 
@@ -163,16 +163,9 @@ function _log(message, _color) {
   console.log(color(message, _color ? _color : 'WHITE'));
 }
 
-async function runCompileHtml() {
-  return compileHtml('src/pages/*.html', null, true);
-}
-async function runCompileScss() {
-  return compileScss('src/scss/*.scss', null, true);
-}
-
 function watchUpdate() {
-  runCompileScss();
-  runCompileHtml();
+  compileScss();
+  compileHtml();
   compileJs()
 
   browserSync.init({
@@ -184,27 +177,27 @@ function watchUpdate() {
   });
 
   watch([
-    'src/pages/*.html',
-    'src/scss/*.scss',
+    'src/pages/**/*.html',
+    'src/scss/**/*.scss',
   ]).on('change', (file) => {
     file = file.replace(/\\/g, '/');
 
     if (file.indexOf('.scss') > -1) {
-      compileScss(file, () => {
+      compileScss('src/scss/*.scss', () => {
         return browserSync.reload();
       });
     }
 
     if (file.indexOf('.html') > -1) {
-      compileHtml(file, () => {
+      compileHtml('src/pages/*.html', () => {
         return browserSync.reload();
       });
     }
   });
 }
 
-exports.html = runCompileHtml;
-exports.sass = runCompileScss;
+exports.html = compileHtml;
+exports.sass = compileScss;
 exports.default = watchUpdate;
 exports.js = compileJs;
 exports.copyVendor = copyVendor;
