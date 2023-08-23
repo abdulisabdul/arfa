@@ -158,6 +158,10 @@ body {
   font-size: 15px;
 }
 
+.expnad-sidebar .main-sidebar .sidebar-content li.open .sub-menu {
+  display: block;
+}
+
 .collapse-sidebar .main-sidebar {
   width: 80px;
 }

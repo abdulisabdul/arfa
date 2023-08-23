@@ -103,6 +103,9 @@ async function compileJs(source) {
     .pipe(rename({
       extname: '.min.js'
     }))
+    .on('end', () => {
+      _log('[js] Compile Finished', 'GREEN');
+    })
     .pipe(dest('./dist/assets/js'))
 
   src('src/js/pages/*.js')
@@ -179,6 +182,7 @@ function watchUpdate() {
   watch([
     'src/pages/**/*.html',
     'src/scss/**/*.scss',
+    'src/js/**/*.js',
   ]).on('change', (file) => {
     file = file.replace(/\\/g, '/');
 
@@ -192,6 +196,10 @@ function watchUpdate() {
       compileHtml('src/pages/*.html', () => {
         return browserSync.reload();
       });
+    }
+
+    if (file.indexOf('.js') > -1) {
+      compileJs()
     }
   });
 }
