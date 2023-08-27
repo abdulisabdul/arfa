@@ -93,7 +93,7 @@ function compileScss(source = 'src/scss/*.scss', onEnd = null, log = true) {
       autoprefixer(),
     ]))
     .pipe(sourcemaps.write('./'))
-    .pipe(dest('assets/css'))
+    .pipe(dest('dist/assets/css'))
     .pipe(plumber.stop());
 }
 
