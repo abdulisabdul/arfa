@@ -129,7 +129,7 @@
         font-size: 16px;
         padding: 10px 0;
         padding-left: 50px;
-        font-weight: 500;
+        font-weight: 300;
         display: block;
         width: 230px;
         position: relative;
@@ -203,6 +203,7 @@
   li.active {
     .sub-menu {
       li.active a {
+        font-weight: 400;
         color: $dark-secondary !important;
         background: $active-navigation;
         box-shadow: none;

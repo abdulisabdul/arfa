@@ -231,7 +231,7 @@ body {
   font-size: 16px;
   padding: 10px 0;
   padding-left: 50px;
-  font-weight: 500;
+  font-weight: 300;
   display: block;
   width: 230px;
   position: relative;
@@ -289,6 +289,7 @@ body {
   left: 20px;
 }
 .sidebar-content li.active .sub-menu li.active a {
+  font-weight: 400;
   color: #1e273d !important;
   background: #f6f6f6;
   box-shadow: none;
@@ -439,7 +440,7 @@ body {
 }
 .header-navbar .header-content .user-dropdown .label div {
   font-size: 0.95rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 .header-navbar .header-content .user-dropdown .img-user {
   width: 40px;
@@ -458,7 +459,7 @@ body {
   position: absolute;
   top: -2px;
   left: 10px;
-  font-weight: bold;
+  font-weight: 500;
   background: #ea5455;
   padding: 2px;
   border-radius: 10px;

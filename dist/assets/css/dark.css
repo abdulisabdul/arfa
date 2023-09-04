@@ -247,89 +247,89 @@ body.dark .alert-primary {
   background-color: rgba(2, 122, 254, 0.05);
   border-color: rgba(2, 122, 254, 0.05);
   box-shadow: 0 0 2px #027afe;
-  font-weight: bold;
+  font-weight: 500;
   color: #027afe;
 }
 body.dark .alert-primary a {
   color: #2b8ffe;
-  font-weight: bold;
+  font-weight: 500;
 }
 body.dark .alert-secondary {
   background-color: rgba(130, 134, 139, 0.05);
   border-color: rgba(130, 134, 139, 0.05);
   box-shadow: 0 0 2px #82868b;
-  font-weight: bold;
+  font-weight: 500;
   color: #82868b;
 }
 body.dark .alert-secondary a {
   color: #979a9f;
-  font-weight: bold;
+  font-weight: 500;
 }
 body.dark .alert-success {
   background-color: rgba(40, 199, 111, 0.05);
   border-color: rgba(40, 199, 111, 0.05);
   box-shadow: 0 0 2px #28c76f;
-  font-weight: bold;
+  font-weight: 500;
   color: #28c76f;
 }
 body.dark .alert-success a {
   color: #3fd884;
-  font-weight: bold;
+  font-weight: 500;
 }
 body.dark .alert-info {
   background-color: rgba(0, 207, 232, 0.05);
   border-color: rgba(0, 207, 232, 0.05);
   box-shadow: 0 0 2px #00cfe8;
-  font-weight: bold;
+  font-weight: 500;
   color: #00cfe8;
 }
 body.dark .alert-info a {
   color: #12e5ff;
-  font-weight: bold;
+  font-weight: 500;
 }
 body.dark .alert-warning {
   background-color: rgba(255, 159, 67, 0.05);
   border-color: rgba(255, 159, 67, 0.05);
   box-shadow: 0 0 2px #ff9f43;
-  font-weight: bold;
+  font-weight: 500;
   color: #ff9f43;
 }
 body.dark .alert-warning a {
   color: #ffb46c;
-  font-weight: bold;
+  font-weight: 500;
 }
 body.dark .alert-danger {
   background-color: rgba(234, 84, 85, 0.05);
   border-color: rgba(234, 84, 85, 0.05);
   box-shadow: 0 0 2px #ea5455;
-  font-weight: bold;
+  font-weight: 500;
   color: #ea5455;
 }
 body.dark .alert-danger a {
   color: #ee7879;
-  font-weight: bold;
+  font-weight: 500;
 }
 body.dark .alert-light {
   background-color: rgba(235, 235, 235, 0.05);
   border-color: rgba(235, 235, 235, 0.05);
   box-shadow: 0 0 2px #ebebeb;
-  font-weight: bold;
+  font-weight: 500;
   color: #ebebeb;
 }
 body.dark .alert-light a {
   color: white;
-  font-weight: bold;
+  font-weight: 500;
 }
 body.dark .alert-dark {
   background-color: rgba(25, 31, 48, 0.05);
   border-color: rgba(25, 31, 48, 0.05);
   box-shadow: 0 0 2px #191f30;
-  font-weight: bold;
+  font-weight: 500;
   color: #191f30;
 }
 body.dark .alert-dark a {
   color: #27304b;
-  font-weight: bold;
+  font-weight: 500;
 }
 body.dark .alert-dark {
   background-color: rgba(25, 31, 48, 0.5);

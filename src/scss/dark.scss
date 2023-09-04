@@ -323,11 +323,11 @@ body.dark {
       background-color: rgba($color, 5%);
       border-color: rgba($color, 5%);
       box-shadow: 0 0 2px $color;
-      font-weight: bold;
+      font-weight: 500;
       color: lighten($color: $color, $amount: 0);
       a {
         color: lighten($color: $color, $amount: 8);
-        font-weight: bold;
+        font-weight: 500;
       }
     }
     @if $class == dark {
@@ -335,7 +335,6 @@ body.dark {
         background-color: rgba($color, 50%);
         border-color: rgba($color, 5%);
         box-shadow: 0 0 2px $color;
-        // font-weight: bold;
         color: $gray;
       }
     }

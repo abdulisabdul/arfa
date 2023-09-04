@@ -5,7 +5,7 @@
   .menu-header * {
     border-bottom: 1px solid #e9e9e9;
     padding-bottom: 5px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1em;
     color: $gray-dark;
   }
@@ -70,7 +70,7 @@
   }
   .menu-content .subject {
     color: $dark;
-    font-weight: bold;
+    font-weight: 500;
     margin: 0 10px;
     line-height: 1em;
     margin-bottom: 5px;
@@ -88,7 +88,7 @@
     float: right;
     font-style: italic;
     color: $gray;
-    font-weight: bold;
+    font-weight: 500;
     font-size: .65em;
   }
   .menu-content .description i {

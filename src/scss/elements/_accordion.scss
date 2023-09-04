@@ -29,7 +29,7 @@
       box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
       &::after {
         color: map-get($map: $theme-colors, $key: "primary");
-        font-weight: bold;
+        font-weight: 500;
       }
     }
     &:focus {

@@ -339,7 +339,7 @@
 .dropdown-menu .menu-header * {
   border-bottom: 1px solid #e9e9e9;
   padding-bottom: 5px;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1em;
   color: #625f6e;
 }
@@ -396,7 +396,7 @@
 }
 .dropdown-menu .menu-content .subject {
   color: #191f30;
-  font-weight: bold;
+  font-weight: 500;
   margin: 0 10px;
   line-height: 1em;
   margin-bottom: 5px;
@@ -413,7 +413,7 @@
   float: right;
   font-style: italic;
   color: #b8c2cc;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 0.65em;
 }
 .dropdown-menu .menu-content .description i {
@@ -440,7 +440,7 @@
 .card .card-header h4 {
   margin-bottom: 0;
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: 500;
   color: #625f6e;
 }
 .card .card-header + .card-body {
@@ -474,7 +474,7 @@
   text-align: center;
   line-height: 1em;
   padding: 0.3em;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .alert-secondary.alert-dismissible {
@@ -490,7 +490,7 @@
   text-align: center;
   line-height: 1em;
   padding: 0.3em;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .alert-success.alert-dismissible {
@@ -506,7 +506,7 @@
   text-align: center;
   line-height: 1em;
   padding: 0.3em;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .alert-info.alert-dismissible {
@@ -522,7 +522,7 @@
   text-align: center;
   line-height: 1em;
   padding: 0.3em;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .alert-warning.alert-dismissible {
@@ -538,7 +538,7 @@
   text-align: center;
   line-height: 1em;
   padding: 0.3em;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .alert-danger.alert-dismissible {
@@ -554,7 +554,7 @@
   text-align: center;
   line-height: 1em;
   padding: 0.3em;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .alert-light.alert-dismissible {
@@ -570,7 +570,7 @@
   text-align: center;
   line-height: 1em;
   padding: 0.3em;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .alert-dark.alert-dismissible {
@@ -586,7 +586,7 @@
   text-align: center;
   line-height: 1em;
   padding: 0.3em;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 /**
@@ -596,7 +596,7 @@
   overflow: visible;
 }
 .modal-title {
-  font-weight: bold;
+  font-weight: 500;
 }
 .modal-header {
   background-color: #f7f7f7;
@@ -681,7 +681,7 @@
 }
 .accordion-item .accordion-button:not(.collapsed)::after {
   color: #027afe;
-  font-weight: bold;
+  font-weight: 500;
 }
 .accordion-item .accordion-button:focus {
   border-color: none;
