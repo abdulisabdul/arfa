@@ -1,26 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
-// :root {
-// --blue-light: #add4ff;
-// --gray: #b8c2cc;
-// --gray-dark: #625f6e;
-// --gray-extra-dark: #625f6e;
-// --gray-light: #f1f1f1;
-// --gray-extra-light: #f7f7f7;
-// --white: #ffffff;
-// --active-navigation: #f6f6f6;
-// --primary: #027afe;
-// --secondary: #82868b;
-// --success: #28c76f;
-// --info: #00cfe8;
-// --warning: #ff9f43;
-// --danger: #ea5455;
-// --light: #ffffff;
-// --dark: #191f30;
-// --dark-secondary: #1e273d;
-// }
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
 @import "../theme_colors";
 
 * {
@@ -28,7 +6,6 @@
   padding: 0;
   // user-select: none;
   box-sizing: border-box;
-  // font-family: "Poppins", sans-serif;
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
 }

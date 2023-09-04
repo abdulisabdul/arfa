@@ -17,17 +17,6 @@ const Main = (function () {
     });
   }
 
-  function shake() {
-    let count = 0;
-    const int = setInterval(function () {
-      document.querySelector(".notification .badge").classList.toggle("shake");
-      count++;
-      if (count >= 10) {
-        clearInterval(int);
-      }
-    }, 4000);
-  }
-
   // settings handler
   function themeHandler() {
     document
@@ -184,7 +173,7 @@ const Main = (function () {
   };
 
   const active = document.querySelector(".main-sidebar li .active");
-  setTimeout(() => {
+  active && setTimeout(() => {
       active.scrollIntoView({block: 'center'});
   }, 200)
 
@@ -319,7 +308,6 @@ const Main = (function () {
       themeHandler();
       // resizeHandler()
       navbarHandler();
-      shake();
     },
   };
 })();
