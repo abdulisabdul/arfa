@@ -715,13 +715,16 @@
 /**
 ***** Table *****
 */
-.table {
+table.table {
   color: #625f6e;
 }
-.table thead {
+table.table thead {
   background-color: #f7f7f7;
 }
-.table > :not(:last-child) > :last-child > * {
+table.table thead tr th {
+  font-weight: 500;
+}
+table.table > :not(:last-child) > :last-child > * {
   border-bottom-color: #b8c2cc;
 }
 
