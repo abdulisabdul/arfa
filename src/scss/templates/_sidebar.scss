@@ -126,10 +126,10 @@
       a {
         color: $gray-dark;
         text-decoration: none;
-        font-size: 16px;
+        font-size: .9rem;
         padding: 10px 0;
         padding-left: 50px;
-        font-weight: 300;
+        font-weight: 400;
         display: block;
         width: 230px;
         position: relative;
@@ -203,7 +203,6 @@
   li.active {
     .sub-menu {
       li.active a {
-        font-weight: 400;
         color: $dark-secondary !important;
         background: $active-navigation;
         box-shadow: none;
